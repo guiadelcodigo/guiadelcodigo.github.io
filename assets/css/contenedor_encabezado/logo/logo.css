@@ -1,0 +1,35 @@
+.logo{
+    margin-left: 2rem;
+    max-width: 100px;
+    min-width: 100px;
+    height: auto;
+    transition: transform .6s ease;
+    animation: repetirAnimacionPulso 2s infinite;
+}
+/* Definir la animación de pulsorepetición */
+
+@keyframes repetirAnimacionPulso {
+    0% {
+        transform:rotateY(360deg) scale(1); /* Escala normal al inicio */
+    }
+    50% {
+        transform:rotateY(360deg) scale(1.2); /* Escala aumentada a la mitad de la animación */
+    }
+    100% {
+        transform:rotateY(360deg) scale(1); /* Volver a la escala normal al final */
+    }
+}
+@keyframes repetirAnimacionGiro{
+    0%{
+        transform: rotatey(0deg);
+    }
+    50%{
+        transform: rotatey(180deg);
+    }
+    100%{
+        transform: rotatey(360deg);
+    }
+}
+.logo:hover{
+    animation: repetirAnimacionGiro 2s infinite;
+}

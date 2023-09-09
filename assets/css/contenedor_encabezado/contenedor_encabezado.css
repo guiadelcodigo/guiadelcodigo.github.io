@@ -1,0 +1,27 @@
+.contenedor_encabezado{
+    align-items: center;
+    background-color: #1F8E95;
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem;
+
+}
+
+/*color azul : #08457d */
+.seccion{
+    background-image: url('../../img/portada.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 25rem;
+    display: flex;
+}
+
+.seccion2{
+    background-image: url('../../img/fondo_guiacodigo1.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+    height: 50rem;
+    display: flex;
+}
