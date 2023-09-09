@@ -1,6 +1,6 @@
 .menu_principal_link_redes{
     text-decoration: none;
-    color: rgb(165, 165, 165);
+    color: black;
     margin-right: 1rem;
     transition: transform .6s ease;
 }
