@@ -7,6 +7,21 @@
 
 }
 
+@media screen and (max-width:768px) {
+    .contenedor_encabezado{
+        justify-content: space-between;
+        flex-direction: column;
+    }
+    .logo{
+        padding-bottom: 2rem;
+        padding-right: 1rem;
+    }
+    .contenedor_menu_principal_lista{
+        padding-bottom: 2rem;
+    }
+}
+
+
 /*color azul : #08457d */
 .seccion{
     background-image: url('../../img/portada.png');
@@ -22,6 +37,6 @@
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center center;
-    height: 50rem;
+    height: 35rem;
     display: flex;
 }
