@@ -1,16 +1,17 @@
 .menu_principal_link_redes{
     text-decoration: none;
     color: black;
-    margin-right: 1rem;
+    margin-right: 2rem;
     transition: transform .6s ease;
+    transform:scale(1.8);
 }
 .menu_principal_link_redes:hover{
     color: gold;
-    transform: rotateY(360deg) scale(1.8);
+    transform:scale(2.5);
     box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.2);
 }
 .menu_principal_link_redes:active{
     color:white ;
-    transform: scale(.5);
+    transform: scale(1.5);
     
 }

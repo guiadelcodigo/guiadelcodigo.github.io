@@ -1,42 +1,129 @@
+/*****POSICIONAMIENTO ENCABEZADO - VERSION ESCRITORIO*****/
 .contenedor_encabezado{
-    align-items: center;
+    margin-top: .2rem;
+    margin-right: .4rem;
+    margin-left: .4rem;
+    background-color: rgba(31, 141, 149, 0.517);
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 6px rgba(255, 255, 255, 0.2);
+}
+body{
     background-color: #1F8E95;
-    display: flex;
-    justify-content: space-between;
-    padding: 1rem;
-
+    background-image: url('../../img/fondo_guiacodigo2.png');
+    background-repeat: repeat-y; /*se repite imagen en forma vertical */
+    background-size: cover;  
 }
-
-@media screen and (max-width:768px) {
+@media (min-width: 1280px){
     .contenedor_encabezado{
-        justify-content: space-between;
-        flex-direction: column;
+        display: grid;
+        grid-template:1fr / repeat(5, 1fr);
+        grid-template-areas: 
+        "c1 c2 c3 c4 c5";
+        justify-items: center;/*centrar elementos horizontalmente*/
+        align-items: center;/*centrar elementos verticalmente*/
     }
-    .logo{
-        padding-bottom: 2rem;
-        padding-right: 1rem;
+    .contenedor_logo{
+        grid-area: c1;
+        padding: 1rem;
     }
+    .contenedor_menu_principal{
+        grid-area: c3;
+    }
+    .contenedor_menu_principal_redes{
+        grid-area: c5;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
     .contenedor_menu_principal_lista{
-        padding-bottom: 2rem;
+        display: flex;
     }
+    .menu_principal_item{
+        flex-direction: row;
+        padding: 1rem;
+        margin:1rem;
+    }
+    .contenedor_menu_principal_lista_redes{
+        display: flex;
+    }
+    .menu_principal_item_redes{
+        flex-direction: row;
+        margin:1rem;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
 }
-
-
-/*color azul : #08457d */
-.seccion{
-    background-image: url('../../img/portada.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 25rem;
-    display: flex;
+/*****POSICIONAMIENTO ENCABEZADO - VERSION TABLET*****/
+@media (min-width:769px) and (max-width: 1280px) {
+    .contenedor_encabezado{
+        display: grid;
+        grid-template:1fr / 1fr 1fr 2fr 1fr 1fr;
+        grid-template-areas: 
+        "c1 c2 c3 c4 c5";
+        justify-items: center;/*centrar elementos horizontalmente*/
+        align-items: center;/*centrar elementos verticalmente*/
+    }
+    .contenedor_logo{
+        grid-area: c1;
+        padding: 1rem;
+    }
+    .contenedor_menu_principal{
+        grid-area: c3;
+    }
+    .contenedor_menu_principal_redes{
+        grid-column-start: c5;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
+    .contenedor_menu_principal_lista{
+        display: flex;
+    }
+    .menu_principal_item{
+        flex-direction: row;
+        padding: .5rem;
+        margin:.5rem;
+    }
+    .contenedor_menu_principal_lista_redes{
+        display: flex;
+    }
+    .menu_principal_item_redes{
+        flex-direction: row;
+        margin:1rem;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
 }
-
-.seccion2{
-    background-image: url('../../img/fondo_guiacodigo1.png');
-    background-repeat: no-repeat;
-    background-size: cover;
-    background-position: center center;
-    height: 35rem;
-    display: flex;
+/*****POSICIONAMIENTO ENCABEZADO - VERSION MOVIL*****/
+@media (max-width: 768px) {
+    .contenedor_encabezado{
+        display: grid;
+        grid-template:2fr 1fr / 1fr 2fr 2fr 1fr;
+        grid-template-areas: 
+        "c1 c2 c3 c4"
+        "c6 c7 c8 c9";
+        justify-items: center;/*centrar elementos horizontalmente*/
+        align-items: center;/*centrar elementos verticalmente*/
+    }
+    .contenedor_logo{
+        grid-area: c2;
+    }
+    
+    .contenedor_menu_principal{
+        grid-area: c3;
+    }
+    
+    .contenedor_menu_principal_redes{
+        grid-column-start: c7;
+        grid-column-end: c8;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
+    .contenedor_menu_principal_lista{
+        
+    }
+    .menu_principal_item{
+        padding: 1rem;
+        margin:1rem;
+    }
+    .contenedor_menu_principal_lista_redes{
+        display: flex;
+    }
+    .menu_principal_item_redes{
+        margin:.4rem;
+    }
+/**ALINEACION DE MENUS DE NAVEGACION**/
 }
