@@ -1,0 +1,239 @@
+/*-----||| ESTILOS DE ELEMENTOS GENERALES |||-----*/
+body{
+    background-color: #1F8E95;
+    background-image: url('../img/fondo_guiacodigo2.png');
+    background-repeat: repeat-y; /**repite imagen en forma vertical**/
+    background-size: 100% auto; /**primer valor ajusta la imagen en ancho, el segundo en alto**/ 
+}
+.tamañoseccionchica{
+    height: 15.625rem;/**15.625=250px**/
+}
+.tamañosecciongrande{
+    height: 31.25rem;/**31.25=500px**/
+}
+.margenseccion{
+    margin-top: .7rem;
+    margin-right: .4rem;
+    margin-left: .4rem;
+    background-color: rgba(31, 141, 149, 0.517);
+    border-radius: 10px;
+    box-shadow: 0 6px 7px 6px rgba(255, 255, 255, 0.2);
+}
+
+
+/*-----||| CONFIG GRID || CONTENEDOR HEADER |||-----*/
+.contenedor_encabezado{
+    display: grid;
+    grid-template-columns:[cl1]1fr[cl2]3fr[cl3]1fr[cl4].25fr[cl5];
+    grid-template-rows:[rl1]1fr[rl2];
+    grid-template-areas:"sp1 sp2 sp3 sp4";
+    grid-gap: .5rem;
+    min-width: 19.813rem;/*317px=19.813rem*/
+}
+/*-----||| CONFIG GRID || CONTENEDOR LOGO |||-----*/
+
+.contenedor_logo{
+    grid-area: sp1;
+    justify-self: center;
+    align-self: center;
+    margin-top: .2rem;
+    .logo{
+        max-width: 100px;
+        max-height: 100px;
+        transition: transform .5s ease-in;
+        animation: repetirAnimacionPulso 2s infinite;
+
+    }
+}
+/*-----||| CONFIG GRID || CONTENEDOR MENU PRINCIPAL |||-----*/
+.contenedor_menu_principal{
+    padding: 0;
+    grid-area: sp2;
+    display: flex;
+    justify-self: center;
+    align-self: center;
+    grid-gap: 3rem;
+    margin:1rem;
+    .menu_principal_item{
+        font-family: Arial;
+        font-weight: 900;
+        font-size: 2rem;
+        color: black;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.451);
+        text-decoration: none;
+    }
+    .menu_principal_item.activo{
+        color: white;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+        animation: repetirAnimacionPulso 2s infinite;
+    }
+    .menu_principal_item:active{
+        color: rgba(255, 253, 247, 0.963);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+    }
+    .menu_principal_item:hover{
+    color: goldenrod;
+    -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+    }
+}
+/*-----||| CONFIG GRID || CONTENEDOR MENU REDES |||-----*/
+.contenedor_menu_redes{
+    grid-area: sp3;
+    justify-self: center;
+    align-self: center;
+    display: grid;
+    grid-gap: .8rem;
+    margin:1rem;
+    .menu_redes_item{
+        font-family: Arial;
+        font-weight: 900;
+        font-size: 2.3rem;
+        color: black;
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.451);
+        text-decoration: none;
+    }
+    .menu_redes_item:hover{
+        color: goldenrod;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+    }
+    .menu_redes_item:active{
+        color: rgba(255, 253, 247, 0.963);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+    }
+}
+.contenedor_lista_redes{
+    justify-self: center;
+    align-self: center;
+}
+/*-----||| CONFIG GRID || CONTENEDOR MENU DESPEGABLE |||-----*/
+.contenedor_menu_despegable{
+    grid-area: sp4;
+    align-self: flex-end;
+    justify-content: flex-end;
+    padding-bottom: .3rem;
+    .icono_menu_despegable{
+        font-size: 4.5rem;
+        color: black;
+        text-shadow: 1px 1px 2px rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.451);
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    .icono_menu_despegable:hover{
+        color: goldenrod;
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+    }
+    .icono_menu_despegable:active{
+        color: rgba(255, 253, 247, 0.963);
+        -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
+        transform: scale(.8);
+    }
+}
+
+/*-----||| CONFIG GRID || CONTENEDOR ASIDE |||-----*/
+aside {
+    position: fixed; top: 100%; right: 0; width: 30%; height: 100vh; background-color: #f2f2f2; transition: top 0.3s ease-in-out; 
+    aside.active { top: calc(100% - 30vh); } }
+
+/*-----||| CONFIG GRID || CONTENEDOR SECCION NOTICIA |||-----*/
+.grid_seccion_noticias{
+    display: grid;
+    grid-template-columns: .4fr 1fr .2fr;
+    grid-template-rows: 1fr;
+    grid-gap: .5rem;
+}
+.contenedor_imagen_seccion{
+    align-self: center;
+    justify-self: flex-end;
+    .imagen_seccion{
+        margin-top: .4rem;
+        margin-bottom: .4rem;
+        max-width: 150px;
+        max-height: 150px;
+        padding: .3rem;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
+        border-radius: 0.625rem;/*10px*/
+        border: .3rem groove rgba(164, 10, 206, 0.85);
+        border-radius:1rem;
+    }
+    .imagen_seccion:hover{
+        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
+    }
+}
+.contenedor_texto_seccion{
+    align-self: flex-start;
+    line-height: 1.2;
+    
+    .titulo_seccion{
+        font-weight: 900;
+        font-size: 2rem;
+        color: rgb(255, 157, 0);
+        text-shadow: 3px 3px 2px rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgba(89, 3, 114, 0.462);
+    }
+    .parrafo_seccion{
+        margin: 1.5rem;
+        padding: .2rem;
+        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+        background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
+        border: .3rem groove rgba(164, 10, 206, 0.85);
+        border-radius: 0.625rem;/*10px*/
+        font-weight: 900;
+        font-size: 1.7rem;
+        color: rgb(255, 253, 247);
+        text-shadow: 2px 3px 2px rgb(0, 0, 0);
+        -webkit-text-stroke: .5px rgb(0, 0, 0);
+    }
+    .parrafo_seccion:hover{
+        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
+    }
+}
+
+
+
+
+
+/*-----||| CONFIG GRID RESPONSIVE MOBILE || CONTENEDOR ENCABEZADO / HEADER |||-----*/
+@media (max-width: 829px) {
+    .contenedor_encabezado{
+        grid-template:2fr .8fr / 1fr 2fr 2.2fr .8fr;
+        grid-template-areas:
+        "sp1 sp2 sp3 sp4"
+        "sp5 sp6 sp7 sp8"; 
+    }     
+    .contenedor_logo{
+        grid-area: sp2;
+        justify-self: center;
+        align-self: center;
+    }
+    .contenedor_menu_principal{
+        padding: 0;
+        grid-column-start: sp3;
+        grid-column-end: sp4;
+        display: grid;
+        justify-self: start ;
+        align-self: center;
+        grid-gap: 1.5rem;
+        .menu_principal_item{
+            font-size: 1.8rem;}
+    }
+    .contenedor_lista_redes{
+        grid-column-start: sp6;
+        grid-column-end: sp7;
+        align-self: end;
+        display: flex;
+    }
+    .contenedor_menu_redes{
+        display: flex;
+        grid-gap: 1rem;
+    }
+    .contenedor_menu_despegable{
+        grid-area: sp8;
+        align-self: flex-start;
+        justify-content: flex-start;
+}
+}
+/*-----||| AJUSTES DE ESPACIOS ENTRE ELEMENTOS AL DISMINUIR PANTALLA |||-----*/
