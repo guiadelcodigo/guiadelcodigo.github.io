@@ -7,12 +7,14 @@
         <link rel="stylesheet" href="css/reset.css">
         <link rel="stylesheet" href="css/normalize.css">
         <link rel="stylesheet" href="css/style.css">
+        <link rel="stylesheet" href="css/animaciones.css">
         <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
     </head>
     <body>
-        <header class="contenedor_encabezado fondoseccion gradient_one">
+        <header class="contenedor_encabezado margenseccion gradient_one">
             <div class="contenedor_logo hovergiro">
-                <img class="logo" src="img/logo3.png" alt="logo"></div>
+                <img class="logo" src="img/logo3.png" alt="logo">
+            </div>
             <ul class="contenedor_menu_principal">
                 <li class="hover"><a class="menu_principal_item" href="index.html"><i class="fa-solid fa-heart"></i> Inicio</a></li>
                 <li class="hover hoverpulse"><a class="menu_principal_item" href="guias.html"><i class="fa-solid fa-book-skull"></i> Guías</a></li>
@@ -23,9 +25,31 @@
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://www.linkedin.com/in/miguelsalcedocardenas"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://discord.gg/gtFzH3zn6U" ><i class="fa-brands fa-discord"></i></a></li></ul>  
             </div>
+            <div class="contenedor_icono_menu_despegable">   
+                <button id="toggleButton" class="icono_menu_despegable">&#9776;</button> 
+            </div>
         </header>
-        <main>
-        
-        </main>
+        <main class="flex_aside_seccnoticia">
+            <aside id="item1" class="menu_aside_despegable margenseccion cambio-de-color">
+                <fieldset>
+                </fieldset>
+                <fieldset>
+                    <input></input>
+                </fieldset>
+                <fieldset>
+                </fieldset>
+                <fieldset>
+                    <input></input>
+                </fieldset>
+                <button style="width: auto; height: auto;">Button</button>
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                </ul>
+            </aside>
+                <section class="grid_seccion_noticias margenseccion cambio-de-color">
+                </section>
+            <script src="js/index.js"></script>
+        </main> 
     </body>
 </html>

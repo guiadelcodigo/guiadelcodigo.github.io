@@ -1,4 +1,6 @@
 /*-----||| ESTILOS DE ELEMENTOS GENERALES |||-----*/
+
+
 body{
     background-color: #1F8E95;
     background-image: url('../img/fondo_guiacodigo2.png');
@@ -15,12 +17,14 @@ body{
     margin-top: .7rem;
     margin-right: .4rem;
     margin-left: .4rem;
-    background-color: rgba(31, 141, 149, 0.517);
+    background-color: rgba(29, 117, 123, 0.639);
     border-radius: 10px;
     box-shadow: 0 6px 7px 6px rgba(255, 255, 255, 0.2);
 }
-
-
+.flex_aside_seccnoticia{
+    display: flex;
+/*flexbox para etiqueta main con contenedor seccion noticia/principal y contenedor menu despegable*/
+}
 /*-----||| CONFIG GRID || CONTENEDOR HEADER |||-----*/
 .contenedor_encabezado{
     display: grid;
@@ -30,8 +34,8 @@ body{
     grid-gap: .5rem;
     min-width: 19.813rem;/*317px=19.813rem*/
 }
-/*-----||| CONFIG GRID || CONTENEDOR LOGO |||-----*/
 
+/*-----||| CONFIG GRID || CONTENEDOR LOGO |||-----*/
 .contenedor_logo{
     grid-area: sp1;
     justify-self: center;
@@ -40,7 +44,7 @@ body{
     .logo{
         max-width: 100px;
         max-height: 100px;
-        transition: transform .5s ease-in;
+        transition: transform .5s ease-in-out;
         animation: repetirAnimacionPulso 2s infinite;
 
     }
@@ -106,8 +110,8 @@ body{
     justify-self: center;
     align-self: center;
 }
-/*-----||| CONFIG GRID || CONTENEDOR MENU DESPEGABLE |||-----*/
-.contenedor_menu_despegable{
+/*-----||| CONFIG GRID || CONTENEDOR ICONO DEL MENU DESPEGABLE |||-----*/
+.contenedor_icono_menu_despegable{
     grid-area: sp4;
     align-self: flex-end;
     justify-content: flex-end;
@@ -131,25 +135,32 @@ body{
         transform: scale(.8);
     }
 }
-
-/*-----||| CONFIG GRID || CONTENEDOR ASIDE |||-----*/
-aside {
-    position: fixed; top: 100%; right: 0; width: 30%; height: 100vh; background-color: #f2f2f2; transition: top 0.3s ease-in-out; 
-    aside.active { top: calc(100% - 30vh); } }
+/*-----||| CONFIG GRID || CONTENEDOR ASIDE MENU DESPEGABLE |||-----*/
+.menu_aside_despegable{
+    order: 2;
+    width: 25%;
+    height: auto; 
+}
 
 /*-----||| CONFIG GRID || CONTENEDOR SECCION NOTICIA |||-----*/
 .grid_seccion_noticias{
+    order: 1;
+    width: 100%;
     display: grid;
-    grid-template-columns: .4fr 1fr .2fr;
+    grid-template-columns: .5fr 1.3fr .2fr;
     grid-template-rows: 1fr;
     grid-gap: .5rem;
+    grid-template-areas:  
+    "sp1 sp2 sp3"
+    "sp4 sp5 sp6";
 }
 .contenedor_imagen_seccion{
     align-self: center;
     justify-self: flex-end;
+    grid-area: sp4;
+    margin-top: .4rem;
+    margin-bottom: .4rem;
     .imagen_seccion{
-        margin-top: .4rem;
-        margin-bottom: .4rem;
         max-width: 150px;
         max-height: 150px;
         padding: .3rem;
@@ -163,40 +174,32 @@ aside {
         box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
     }
 }
-.contenedor_texto_seccion{
-    align-self: flex-start;
+.titulo_seccion{
+    grid-area: sp2;
+    font-weight: 900;
+    font-size: 2rem;
+    color: rgb(255, 157, 0);
+    text-shadow: 3px 3px 2px rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgba(89, 3, 114, 0.462);
+    line-height: 1.1;
+    }
+.parrafo_seccion{
+    grid-area: sp5;
+    margin: 1.5rem;
+    padding: .2rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
+    border: .3rem groove rgba(164, 10, 206, 0.85);
+    border-radius: 0.625rem;/*10px*/
+    font-weight: 900;
+    font-size: 1.7rem;
     line-height: 1.2;
-    
-    .titulo_seccion{
-        font-weight: 900;
-        font-size: 2rem;
-        color: rgb(255, 157, 0);
-        text-shadow: 3px 3px 2px rgb(0, 0, 0);
-        -webkit-text-stroke: 1px rgba(89, 3, 114, 0.462);
+    color: rgb(255, 253, 247);
+    text-shadow: 2px 3px 2px rgb(0, 0, 0);
+    -webkit-text-stroke: .5px rgb(0, 0, 0);
     }
-    .parrafo_seccion{
-        margin: 1.5rem;
-        padding: .2rem;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
-        border: .3rem groove rgba(164, 10, 206, 0.85);
-        border-radius: 0.625rem;/*10px*/
-        font-weight: 900;
-        font-size: 1.7rem;
-        color: rgb(255, 253, 247);
-        text-shadow: 2px 3px 2px rgb(0, 0, 0);
-        -webkit-text-stroke: .5px rgb(0, 0, 0);
-    }
-    .parrafo_seccion:hover{
-        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
-    }
-}
 
-
-
-
-
-/*-----||| CONFIG GRID RESPONSIVE MOBILE || CONTENEDOR ENCABEZADO / HEADER |||-----*/
+/*-----||| CONFIG GRID RESPONSIVE MOBILE |||-----*/
 @media (max-width: 829px) {
     .contenedor_encabezado{
         grid-template:2fr .8fr / 1fr 2fr 2.2fr .8fr;
@@ -225,15 +228,52 @@ aside {
         grid-column-end: sp7;
         align-self: end;
         display: flex;
+        .contenedor_menu_redes{
+            display: flex;
+            grid-gap: 1rem;
+        }
     }
-    .contenedor_menu_redes{
-        display: flex;
-        grid-gap: 1rem;
-    }
-    .contenedor_menu_despegable{
+    .contenedor_icono_menu_despegable{
         grid-area: sp8;
         align-self: flex-start;
         justify-content: flex-start;
+    }
+    .grid_seccion_noticias{
+        display: grid;
+        grid-gap: .5rem;
+        grid-template-columns: 1fr;
+        grid-template-rows: .5fr .3fr 1fr;
+        grid-template-areas:
+        "elemento1" 
+        "elemento2" 
+        "elemento3";
+        .contenedor_imagen_seccion{
+            grid-area: elemento1;
+            align-self: center;
+            justify-self: center;
+            margin: .3rem 0 0 0;
+        }
+        .titulo_seccion{
+            grid-area: elemento2;
+            align-self: center;
+            justify-self: center;
+            text-align: center;
+            margin: 0;
+        }
+        .parrafo_seccion{
+            grid-area: elemento3;
+            align-self: center;
+            justify-self: center;
+            margin: 0 0 .4rem 0;
+        }   
+    }
+    .flex_aside_seccnoticia{
+        flex-direction: column;
+    }
+    .menu_aside_despegable{
+        order: 1;
+        width: 100%;
+    }
 }
-}
-/*-----||| AJUSTES DE ESPACIOS ENTRE ELEMENTOS AL DISMINUIR PANTALLA |||-----*/
+
+/*-----||| AJUSTES DE ELEMENTOS AL DISMINUIR PANTALLA |||-----*/

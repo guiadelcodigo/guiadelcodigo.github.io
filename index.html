@@ -9,12 +9,12 @@
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="css/animaciones.css">
         <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
-        <script src="js/index.js"></script>
     </head>
     <body>
         <header class="contenedor_encabezado margenseccion gradient_one">
             <div class="contenedor_logo hovergiro">
-                <img class="logo" src="img/logo1.png" alt="logo"></div>
+                <img class="logo" src="img/logo1.png" alt="logo">
+            </div>
             <ul class="contenedor_menu_principal">
                 <li class="hover"><a class="menu_principal_item activo" href="index.html"><i class="fa-solid fa-heart"></i> Inicio</a></li>
                 <li class="hover hoverpulse"><a class="menu_principal_item" href="guias.html"><i class="fa-solid fa-book-skull"></i> Guías</a></li>
@@ -25,24 +25,36 @@
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://www.linkedin.com/in/miguelsalcedocardenas"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://discord.gg/gtFzH3zn6U" ><i class="fa-brands fa-discord"></i></a></li></ul>  
             </div>
-            <div class="contenedor_menu_despegable">   
-                <button class="icono_menu_despegable" id="btn">&#9776;</button> 
+            <div class="contenedor_icono_menu_despegable">   
+                <button id="toggleButton" class="icono_menu_despegable">&#9776;</button> 
             </div>
         </header>
-        <aside id="aside">
-            ASIDE
-        </aside>
-        <section class="grid_seccion_noticias margenseccion gradient_one"">
-            <diV class="contenedor_imagen_seccion">
-                <img class="imagen_seccion" src="img/wizard.jpeg" alt="wizard typing">
-            </diV>
-            <div class="contenedor_texto_seccion">
-                <h1 class="titulo_seccion">¡Domina la Lógica Programación sin Perder la Cabeza! &#129327;🚀</h1>
-                <p class="parrafo_seccion"> ¡Sin trucos, solo magia!&#128214;&#129497;<br>¡Sé un maestro del código en un abrir y cerrar de ojos!💻&#9749;<br> Únete y disfruta de aprender a tu ritmo, sin prisas ni preocupaciones. &#9996;😜</p>
-            </div>
-        </section>
-        <section class="tamañoseccionchica margenseccion gradient_one">
-        </section>
-        </main>
+        <main class="flex_aside_seccnoticia">
+            <aside id="item1" class="menu_aside_despegable margenseccion cambio-de-color">
+                <fieldset>
+                </fieldset>
+                <fieldset>
+                    <input></input>
+                </fieldset>
+                <fieldset>
+                </fieldset>
+                <fieldset>
+                    <input></input>
+                </fieldset>
+                <button style="width: auto; height: auto;">Button</button>
+                <ul>
+                    <li><a href="#">link 1</a></li>
+                    <li><a href="#">link 2</a></li>
+                </ul>
+            </aside>
+            <section class="grid_seccion_noticias margenseccion cambio-de-color">
+                <diV class="contenedor_imagen_seccion">
+                    <img class="imagen_seccion" src="img/wizard.jpeg" alt="wizard typing">
+                </diV>
+                    <h1 class="titulo_seccion">¡Domina la Lógica de Programación sin Perder la Cabeza! &#129327;🚀</h1>
+                    <p class="parrafo_seccion"> ¡Sin trucos, solo magia!&#128214;&#129497;<br>¡Sé un maestro del código en un abrir y cerrar de ojos!💻&#9749;<br> Únete y disfruta de aprender a tu ritmo, sin prisas ni preocupaciones. &#9996;😜</p>
+            </section>
+            <script src="js/index.js"></script>
+        </main> 
     </body>
 </html>

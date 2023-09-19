@@ -1,3 +1,13 @@
+___________________
+**position:**
+static:
+relative:
+absolute:
+fixed:
+sticky:
+______________
+
+
 color azul verde #1F8E95
 
 @keyframes repetirAnimacionPulso {
