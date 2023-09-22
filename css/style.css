@@ -1,11 +1,12 @@
 /*-----||| ESTILOS DE ELEMENTOS GENERALES |||-----*/
-
-
 body{
     background-color: #1F8E95;
     background-image: url('../img/fondo_guiacodigo2.png');
     background-repeat: repeat-y; /**repite imagen en forma vertical**/
     background-size: 100% auto; /**primer valor ajusta la imagen en ancho, el segundo en alto**/ 
+}
+.ocultoInicialmente{
+    display: none;
 }
 .tamañoseccionchica{
     height: 15.625rem;/**15.625=250px**/
@@ -23,8 +24,10 @@ body{
 }
 .flex_aside_seccnoticia{
     display: flex;
-/*flexbox para etiqueta main con contenedor seccion noticia/principal y contenedor menu despegable*/
+/**este es un flexbox para etiqueta main*/
+/**contenedora del aside despegable y seccion noticia/principal*/
 }
+
 /*-----||| CONFIG GRID || CONTENEDOR HEADER |||-----*/
 .contenedor_encabezado{
     display: grid;
@@ -56,15 +59,15 @@ body{
     display: flex;
     justify-self: center;
     align-self: center;
-    grid-gap: 3rem;
+    grid-gap: 1.5rem;
     margin:1rem;
     .menu_principal_item{
-        font-family: Arial;
-        font-weight: 900;
+        font-family: 'Press Start 2P', cursive;
+        font-weight: 200;
         font-size: 2rem;
         color: black;
         text-shadow: 1px 1px 2px rgb(0, 0, 0);
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.451);
+        -webkit-text-stroke: .5px rgba(255, 255, 255, 0.563);
         text-decoration: none;
     }
     .menu_principal_item.activo{
@@ -136,11 +139,90 @@ body{
     }
 }
 /*-----||| CONFIG GRID || CONTENEDOR ASIDE MENU DESPEGABLE |||-----*/
+
 .menu_aside_despegable{
     order: 2;
+    min-height:13rem;
     width: 25%;
     height: auto; 
+    align-self: flex-start;
+    justify-self: center;
 }
+.contenedor_login_register{
+    display: grid;
+    grid-gap: 1rem;
+    grid-template-columns: 1fr;
+    grid-template-rows: .5fr .5fr .5fr .5fr auto;
+    grid-template-areas:
+    "sp1"
+    "sp2"
+    "sp3"
+    "sp4"
+    "sp5";
+    width: 92%;
+    min-width: 13.8rem;
+    min-height:10rem;
+    margin-top: 2%;
+    margin-bottom:2%;
+    margin-right: 4%;
+    margin-left: 4%;
+    background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
+    border: .3rem groove rgba(164, 10, 206, 0.85);
+    border-radius:1rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    .btn-open-login{
+        height: 10rem;
+        background-color: rgb(255, 157, 0);;
+        border-radius:1rem;
+        font-family: 'Press Start 2P', cursive;
+        color: black;
+        text-shadow: 1.5px 1.4px 3px rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.348);
+        grid-row-start: sp1;
+        grid-row-end: sp2;
+        margin: .5rem;
+    }
+    .btn-open-register{
+        height: 10rem;
+        background-color: rgb(255, 157, 0);
+        border-radius:1rem;
+        font-family: 'Press Start 2P', cursive;
+        color: black;
+        text-shadow: 1.5px 1.4px 3px rgb(0, 0, 0);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.348);
+        grid-row-start: sp3;
+        grid-row-end: sp5;
+        margin: .5rem;
+    }
+}
+.emailRegister{
+    background-color: rgba(0, 0, 0, 0.647);
+    border-radius: 1rem;
+    border: .45rem groove rgba(45, 8, 8, 0.905);
+    color: white;
+    margin: .5rem;
+}
+.passwordRegister{
+    background-color: rgba(0, 0, 0, 0.788);
+    border-radius: 1rem;
+    border: .45rem groove rgba(45, 8, 8, 0.905);
+    color: white;
+    margin: .5rem;
+}
+.txtRegisterLogin{
+    margin: .5rem;
+    justify-self: center;
+    align-self: center;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 900;
+    -webkit-text-stroke: .8px rgb(0, 0, 0);
+    text-shadow: 1.8px 1.8px 2px rgb(0, 0, 0);
+    line-height: .8;
+    text-align: center;
+}
+
 
 /*-----||| CONFIG GRID || CONTENEDOR SECCION NOTICIA |||-----*/
 .grid_seccion_noticias{
@@ -191,8 +273,9 @@ body{
     background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
     border: .3rem groove rgba(164, 10, 206, 0.85);
     border-radius: 0.625rem;/*10px*/
-    font-weight: 900;
-    font-size: 1.7rem;
+    font-weight: 800;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
     line-height: 1.2;
     color: rgb(255, 253, 247);
     text-shadow: 2px 3px 2px rgb(0, 0, 0);
@@ -200,9 +283,9 @@ body{
     }
 
 /*-----||| CONFIG GRID RESPONSIVE MOBILE |||-----*/
-@media (max-width: 829px) {
+@media (max-width: 940px) {
     .contenedor_encabezado{
-        grid-template:2fr .8fr / 1fr 2fr 2.2fr .8fr;
+        grid-template:1.3fr .8fr / .1fr 1.5fr 2.2fr .8fr;
         grid-template-areas:
         "sp1 sp2 sp3 sp4"
         "sp5 sp6 sp7 sp8"; 
@@ -219,7 +302,7 @@ body{
         display: grid;
         justify-self: start ;
         align-self: center;
-        grid-gap: 1.5rem;
+        grid-gap: .8rem;
         .menu_principal_item{
             font-size: 1.8rem;}
     }
