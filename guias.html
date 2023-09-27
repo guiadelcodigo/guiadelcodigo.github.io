@@ -1,55 +1,106 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
         <title>GUÍADELCÓDIGO|ALFA</title>
         <meta charset="utf-8">
-        <meta name="viewport" content="width=device-width">
-        <link rel="stylesheet" href="css/reset.css">
-        <link rel="stylesheet" href="css/normalize.css">
-        <link rel="stylesheet" href="css/style.css">
-        <link rel="stylesheet" href="css/animaciones.css">
-        <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="./css/reset.css">
+        <link rel="stylesheet" href="./css/normalize.css">
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/animaciones.css">
+        <link rel="icon" href="./img/logo/ico/logo1.ico">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+        <link href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap" rel="stylesheet">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Concert+One&family=Press+Start+2P&display=swap" rel="stylesheet">
+        <script type="module" src="./js/index.js"></script>
     </head>
     <body>
         <header class="contenedor_encabezado margenseccion gradient_one">
             <div class="contenedor_logo hovergiro">
-                <img class="logo" src="img/logo2.png" alt="logo">
+                <img class="logo" src="img/logo/logo7.png" alt="logo">
             </div>
             <ul class="contenedor_menu_principal">
-                <li class="hover"><a class="menu_principal_item" href="index.html"><i class="fa-solid fa-heart"></i> Inicio</a></li>
-                <li class="hover hoverpulse"><a class="menu_principal_item activo" href="guias.html"><i class="fa-solid fa-book-skull"></i> Guías</a></li>
-                <li class="hover hoverpulse"><a class="menu_principal_item" href="juegos.html"><i class="fa-solid fa-gamepad"></i> Juegos</a></li></ul>
+                <li class="hover hoverpulse"><a class="menu_principal_item" href="index.html"><i class="fa-solid fa-heart"></i>Inicio</a></li>
+                <li class="hover"><a class="menu_principal_item activo" href="guias.html"><i class="fa-solid fa-book-skull"></i>Guías</a></li>
+                <li class="hover hoverpulse"><a class="menu_principal_item" href="juegos.html"><i class="fa-solid fa-gamepad"></i>Juegos</a></li></ul>
             <div class="contenedor_lista_redes">
                 <ul class="contenedor_menu_redes">
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://www.youtube.com/channel/UCO17FRqBGISDRQ1I6IeRKMg"><i class="fa-brands fa-youtube"></i></a></li>
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://www.linkedin.com/in/miguelsalcedocardenas"><i class="fa-brands fa-linkedin"></i></a></li>
                 <li class="hover hoverpulse"><a class="menu_redes_item" href="https://discord.gg/gtFzH3zn6U" ><i class="fa-brands fa-discord"></i></a></li></ul>  
             </div>
-            <div class="contenedor_icono_menu_despegable">   
+            <div class="contenedor_icono_menu_despegable">
                 <button id="toggleButton" class="icono_menu_despegable">&#9776;</button> 
             </div>
         </header>
-        <main class="flex_aside_seccnoticia">
+        <section class="flex_aside_principal">
             <aside id="item1" class="menu_aside_despegable margenseccion cambio-de-color">
-                <fieldset>
-                </fieldset>
-                <fieldset>
-                    <input></input>
-                </fieldset>
-                <fieldset>
-                </fieldset>
-                <fieldset>
-                    <input></input>
-                </fieldset>
-                <button style="width: auto; height: auto;">Button</button>
-                <ul>
-                    <li><a href="#">link 1</a></li>
-                    <li><a href="#">link 2</a></li>
-                </ul>
+                <div class="contenedor_login_register">
+                    <button id="btn-open-login" class="btn-open-login">Iniciar sesión</button>
+                        <input id="emailLogin" class="emailRegister ocultoInicialmente" type="email" placeholder="CORREO ELECTRONICO">
+                        <input id="passwordLogin" class="passwordRegister ocultoInicialmente" type="password" placeholder="CONTRASEÑA">
+                        <p id="txtLogin" class="txtRegisterLogin ocultoInicialmente">Inicia sesion con tu correo y tu contraseña</p>
+                        <button id="btn-login" class="btn-open-login ocultoInicialmente" onclick="iniciarSesion()" >Iniciar sesión</button>
+                    <button id="btn-open-register" class="btn-open-register">Regístrate</button>
+                        <input id="emailRegister" class="emailRegister ocultoInicialmente" type="email" placeholder="REGISTRA TU CORREO">
+                        <input id="passwordRegister" class="passwordRegister ocultoInicialmente" type="password" placeholder="REGISTRA TU CONTRASEÑA">
+                        <p id="txtRegister" class="txtRegister ocultoInicialmente">Registrate con tu correo y una contraseña</p>
+                        <button id="btn-register" class="btn-open-register ocultoInicialmente" onclick="registrar()" >Regístrate</button>  
+                </div>
             </aside>
-            <section class="grid_seccion_noticias margenseccion cambio-de-color">
+            <section class="grid_guias margenseccion cambio-de-color">
+                <h1 class="posicion_tituloGuias titulo_seccionStyle">GUÍAS DE PROGRAMACIÓN</h1>
+                <div class="contenedor_guias_intro">
+                    <p class="parrafo_guias_intro parrafoStyle"> ¿Quieres aprender a programar sin dramas ni dolores de cabeza?🤯<br>¡Estás en el lugar correcto!&#9989; <br>Aquí todos pueden aprender con facilidad,<br> y divertirte será tu única obligación.&#129305;</p>
+                    <div class="contenedor_ImgGuiaIntro_posicion"><img class="img_size imagen_seccion" src="img/recursos_ia/in_desk/wizard_hippie2.jpeg" alt="wizard typing"></div>
+                    <p class="parrafo_guias_intro2 parrafoStyle">¡Descubre el lado emocionante de la programación y prepárate para codear como un pro!&#129464;<br><br>¡Explora abajo y navega en los temas de tu interés!&#128214;</p>
+                </div>
             </section>
-            <script src="js/index.js"></script>
-        </main> 
+        </section>
+        <section class="seccion_portadas_grid margenseccion cambio-de-color">
+          <figure class="contenedor_portada">
+            <a class="link_portada" href="#">
+              <img class="img_portada" src="img/portada_guias/html_portada.png" alt="Portada HTML">
+              <figcaption class="figcap_portada">breve intro del contenido de HTML</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+            </a>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/css_portada.png" alt="Portada CSS">
+              <figcaption class="figcap_portada">breve intro del contenido de CSS</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/javascript_portada.png" alt="Portada JavaScript">
+              <figcaption class="figcap_portada">breve intro del contenido de Javascript</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/logica_portada.png" alt="Portada LOGICA">
+              <figcaption class="figcap_portada">breve intro del contenido</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/python_portada.png" alt="Portada Python">
+              <figcaption class="figcap_portada">breve intro del contenido</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/c_sharp_portada.png" alt="Portada C#">
+              <figcaption class="figcap_portada">breve intro del contenido</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+          <figure class="contenedor_portada">
+              <img class="img_portada" src="img/portada_guias/gdscript_portada.png" alt="Portada GDScript">
+              <figcaption class="figcap_portada">breve intro del contenido</figcaption>
+              <div class="overlay_portada">Texto Overlay</div>
+          </figure>
+        </section>
+        <script src="./js/login_register.js"></script>
+        <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     </body>
 </html>

@@ -1,6 +1,5 @@
 /*-----||| ESTILOS DE ELEMENTOS GENERALES |||-----*/
 body{
-    background-color: #1F8E95;
     background-image: url('../img/fondo_guiacodigo2.png');
     background-repeat: repeat-y; /**repite imagen en forma vertical**/
     background-size: 100% auto; /**primer valor ajusta la imagen en ancho, el segundo en alto**/ 
@@ -16,14 +15,15 @@ body{
 }
 .margenseccion{
     margin-top: .7rem;
-    margin-right: .4rem;
+    margin-right: .8rem;
     margin-left: .4rem;
     background-color: rgba(29, 117, 123, 0.639);
     border-radius: 10px;
     box-shadow: 0 6px 7px 6px rgba(255, 255, 255, 0.2);
 }
-.flex_aside_seccnoticia{
+.flex_aside_principal{
     display: flex;
+    margin-right: .9rem;
 /**este es un flexbox para etiqueta main*/
 /**contenedora del aside despegable y seccion noticia/principal*/
 }
@@ -45,8 +45,8 @@ body{
     align-self: center;
     margin-top: .2rem;
     .logo{
-        max-width: 100px;
-        max-height: 100px;
+        max-width: 120px;
+        max-height: 120px;
         transition: transform .5s ease-in-out;
         animation: repetirAnimacionPulso 2s infinite;
 
@@ -80,7 +80,7 @@ body{
         -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
     }
     .menu_principal_item:hover{
-    color: goldenrod;
+    color: rgb(255, 157, 0);
     -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
     }
 }
@@ -101,7 +101,7 @@ body{
         text-decoration: none;
     }
     .menu_redes_item:hover{
-        color: goldenrod;
+        color: rgb(255, 157, 0);
         -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
     }
     .menu_redes_item:active{
@@ -113,32 +113,33 @@ body{
     justify-self: center;
     align-self: center;
 }
-/*-----||| CONFIG GRID || CONTENEDOR ICONO DEL MENU DESPEGABLE |||-----*/
+/*-----||| CONFIG GRID || ICONO DEL MENU DESPEGABLE |||-----*/
 .contenedor_icono_menu_despegable{
     grid-area: sp4;
     align-self: flex-end;
     justify-content: flex-end;
-    padding-bottom: .3rem;
     .icono_menu_despegable{
-        font-size: 4.5rem;
+        font-family:Arial, Helvetica, sans-serif;
+        font-weight: 200;
+        font-size: 4rem;
         color: black;
         text-shadow: 1px 1px 2px rgb(0, 0, 0);
-        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.451);
+        -webkit-text-stroke: 1px rgba(255, 255, 255, 0.688);
         background: none;
         border: none;
         cursor: pointer;
     }
     .icono_menu_despegable:hover{
-        color: goldenrod;
+        color: rgb(255, 157, 0);
         -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
     }
     .icono_menu_despegable:active{
         color: rgba(255, 253, 247, 0.963);
         -webkit-text-stroke: 1px rgba(0, 0, 0, 0.781);
-        transform: scale(.8);
+        transform: scale(.9);
     }
 }
-/*-----||| CONFIG GRID || CONTENEDOR ASIDE MENU DESPEGABLE |||-----*/
+/*-----||| CONFIG GRID || ASIDE MENU DESPEGABLE|||-----*/
 
 .menu_aside_despegable{
     order: 2;
@@ -147,32 +148,29 @@ body{
     height: auto; 
     align-self: flex-start;
     justify-self: center;
+    align-items: center;
 }
 .contenedor_login_register{
     display: grid;
-    grid-gap: 1rem;
+    grid-gap: .3rem;
     grid-template-columns: 1fr;
-    grid-template-rows: .5fr .5fr .5fr .5fr auto;
+    grid-template-rows: auto .5fr .5fr .5fr auto;
     grid-template-areas:
     "sp1"
     "sp2"
     "sp3"
     "sp4"
     "sp5";
-    width: 92%;
+    width: 100%;
     min-width: 13.8rem;
     min-height:10rem;
-    margin-top: 2%;
-    margin-bottom:2%;
-    margin-right: 4%;
-    margin-left: 4%;
     background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
     border: .3rem groove rgba(164, 10, 206, 0.85);
     border-radius:1rem;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     .btn-open-login{
         height: 10rem;
-        background-color: rgb(255, 157, 0);;
+        background-color: rgb(255, 157, 0);
         border-radius:1rem;
         font-family: 'Press Start 2P', cursive;
         color: black;
@@ -181,6 +179,9 @@ body{
         grid-row-start: sp1;
         grid-row-end: sp2;
         margin: .5rem;
+    }
+    .btn-open-login:hover{
+        color: white;
     }
     .btn-open-register{
         height: 10rem;
@@ -192,7 +193,16 @@ body{
         -webkit-text-stroke: 1px rgba(255, 255, 255, 0.348);
         grid-row-start: sp3;
         grid-row-end: sp5;
-        margin: .5rem;
+        margin: .5rem .5rem .5rem .5rem;
+    }
+    .btn-open-register:hover{
+        color: white;
+    }
+    .btn-open-register:active{
+        transform: scale(.95);
+    }
+    .btn-open-login:active{
+        transform: scale(.95);
     }
 }
 .emailRegister{
@@ -202,6 +212,10 @@ body{
     color: white;
     margin: .5rem;
 }
+.emailRegister:focus{
+    transition: border-color 0.3s ease;
+    border-color: rgba(0, 255, 115, 0.759);
+}
 .passwordRegister{
     background-color: rgba(0, 0, 0, 0.788);
     border-radius: 1rem;
@@ -209,10 +223,14 @@ body{
     color: white;
     margin: .5rem;
 }
+.passwordRegister:focus{
+    transition: border-color 0.3s ease;
+    border-color: rgba(0, 255, 115, 0.759);
+}
 .txtRegisterLogin{
-    margin: .5rem;
+    margin: .5rem 1.5rem .2rem .5rem;
     justify-self: center;
-    align-self: center;
+    align-self: flex-end;
     font-family: Arial, Helvetica, sans-serif; 
     color: white;
     font-size: 1.4rem;
@@ -222,19 +240,31 @@ body{
     line-height: .8;
     text-align: center;
 }
-
-
-/*-----||| CONFIG GRID || CONTENEDOR SECCION NOTICIA |||-----*/
-.grid_seccion_noticias{
+.txtRegister{
+    margin: .2rem .2rem 1rem .2rem;
+    justify-self: center;
+    align-self: flex-start;
+    font-family: Arial, Helvetica, sans-serif; 
+    color: white;
+    font-size: 1.4rem;
+    font-weight: 900;
+    -webkit-text-stroke: .8px rgb(0, 0, 0);
+    text-shadow: 1.8px 1.8px 2px rgb(0, 0, 0);
+    line-height: .8;
+    text-align: center;
+}
+/*-----||| CONFIG GRID || CONTENEDOR SECCION PRINCIPAL/NOTICIA Y SUS ELEMENTOS|||-----*/
+.grid_seccion_principal{
     order: 1;
     width: 100%;
     display: grid;
-    grid-template-columns: .5fr 1.3fr .2fr;
-    grid-template-rows: 1fr;
+    grid-template-columns: .5fr 1.1fr .2fr;
+    grid-template-rows: .2fr .5fr .3fr;
     grid-gap: .5rem;
     grid-template-areas:  
     "sp1 sp2 sp3"
-    "sp4 sp5 sp6";
+    "sp4 sp5 sp6"
+    "sp7 sp8 sp9";
 }
 .contenedor_imagen_seccion{
     align-self: center;
@@ -242,24 +272,29 @@ body{
     grid-area: sp4;
     margin-top: .4rem;
     margin-bottom: .4rem;
-    .imagen_seccion{
-        max-width: 150px;
-        max-height: 150px;
-        padding: .3rem;
-        box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
-        background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
-        border-radius: 0.625rem;/*10px*/
-        border: .3rem groove rgba(164, 10, 206, 0.85);
-        border-radius:1rem;
-    }
-    .imagen_seccion:hover{
-        box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
-    }
 }
-.titulo_seccion{
+.imagen_seccion{
+    max-width: 150px;
+    max-height: 150px;
+    padding: .3rem;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
+    
+    border: .3rem groove rgba(164, 10, 206, 0.85);
+    border-radius:1rem;
+}
+.imagen_seccion:hover{
+    box-shadow: 0 0 1rem rgba(255, 255, 255, 0.836); 
+}
+.posicion_tituloIndex{
     grid-area: sp2;
+    align-self: flex-end;
+    text-align: center;
+}
+.titulo_seccionStyle{
     font-weight: 900;
     font-size: 2rem;
+    text-align: center;
     color: rgb(255, 157, 0);
     text-shadow: 3px 3px 2px rgb(0, 0, 0);
     -webkit-text-stroke: 1px rgba(89, 3, 114, 0.462);
@@ -269,6 +304,7 @@ body{
     grid-area: sp5;
     margin: 1.5rem;
     padding: .2rem;
+    height: auto;
     box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
     background-color: rgba(182, 20, 231, 0.46); /* Fondo del contenedor */
     border: .3rem groove rgba(164, 10, 206, 0.85);
@@ -281,11 +317,118 @@ body{
     text-shadow: 2px 3px 2px rgb(0, 0, 0);
     -webkit-text-stroke: .5px rgb(0, 0, 0);
     }
+.botonSeccion{
+    align-self: center;
+    justify-self: center;
+    min-width: 8.4rem;
+    width: 60%;
+    height: 5rem;
+    grid-area: sp8;
+    background-color: rgb(255, 157, 0);
+    border-radius:1rem;
+    font-family: 'Press Start 2P', cursive;
+    color: black;
+    text-shadow: 1.5px 1.4px 3px rgb(0, 0, 0);
+    -webkit-text-stroke: 1px rgba(255, 255, 255, 0.348);
+    margin: .5rem .5rem .5rem .5rem;
+    .botonSeccion:hover{
+        color: white;
+    }
+    .botonSeccion:active{
+        transform: scale(.95);
+    }
+}
+/*-----||| CONFIG GRID ||SECCION INTRO DE GUIAS|||-----*/
+.grid_guias{
+    display: grid;
+    order: 1;
+    width: 100%; 
+    grid-template-columns:1fr;
+    grid-template-rows:auto ;
+    grid-template-areas:
+    "sp1 sp1 sp1"
+    "sp2 sp2 sp2"
+    "sp3 sp3 sp3";
+}
+.posicion_tituloGuias{
+    grid-area: sp1;
+    align-self: flex-end;
+    justify-self: center;
+}
+.contenedor_guias_intro{
+    grid-area: sp2;
+    justify-self: center;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.7);
+    background-color: rgba(182, 20, 231, 0.46);
+    border: .3rem groove rgba(164, 10, 206, 0.85);
+    border-radius: 0.625rem;/*10px*/
+    width: 90%;
+    display: grid;
+    grid-template-columns: 1.5fr .5fr;
+    grid-template-rows: 1fr auto;
+    grid-template-areas:
+    "sp1 sp2"
+    "sp3 sp3"; 
+}
+.parrafo_guias_intro{
+    grid-area: sp1;
+    align-self: center;
+}
+.contenedor_ImgGuiaIntro_posicion{
+    grid-area: sp2;
+    max-width: 120px;
+    margin: .3rem;
+    align-self:center;
+}
+.parrafo_guias_intro2{
+    grid-area: sp3;
+    align-self:center;
+    justify-self:stretch;
+}
+.parrafoStyle{
+        font-family: Arial, Helvetica, sans-serif;
+        font-size: 1.4rem;
+        font-weight: 900;
+        line-height: 1.2;
+        color: rgb(255, 253, 247);
+        text-shadow: 2px 3px 2px rgb(0, 0, 0);
+        -webkit-text-stroke: .5px rgb(0, 0, 0);
+}
+.img_size{
+    width: 100%;
+    min-width: 80px;
+}
+/*-----||| CONFIG GRID ||SECCION PORTADAS DE GUIAS|||-----*/
+
+.seccion_portadas_grid{
+    display: grid;
+    justify-self: center;  
+    grid-template-columns:auto auto auto auto;
+    grid-template-rows: auto auto;
+}
+.contenedor_portada{
+    min-width: 50px;    
+}
+.img_portada{
+    width: 100%;
+}
+.img_portada:hover{
+    filter: brightness(0%);
+}
+.overlay_portada{
+}
 
 /*-----||| CONFIG GRID RESPONSIVE MOBILE |||-----*/
-@media (max-width: 940px) {
+
+@media (max-width: 961px) {
+    .seccion_portadas_grid{
+        display: grid;
+        justify-self: center;  
+        grid-template-columns:auto auto auto;
+        grid-template-rows: auto auto;
+    }
     .contenedor_encabezado{
-        grid-template:1.3fr .8fr / .1fr 1.5fr 2.2fr .8fr;
+        grid-template:auto .6fr / .1fr 1.5fr 2.2fr .8fr;
         grid-template-areas:
         "sp1 sp2 sp3 sp4"
         "sp5 sp6 sp7 sp8"; 
@@ -298,30 +441,32 @@ body{
     .contenedor_menu_principal{
         padding: 0;
         grid-column-start: sp3;
+        margin:.4rem ;
         grid-column-end: sp4;
         display: grid;
         justify-self: start ;
         align-self: center;
         grid-gap: .8rem;
-        .menu_principal_item{
-            font-size: 1.8rem;}
+    }
+    .menu_principal_item{
+        font-size: 1.8rem;
     }
     .contenedor_lista_redes{
         grid-column-start: sp6;
         grid-column-end: sp7;
         align-self: end;
         display: flex;
-        .contenedor_menu_redes{
-            display: flex;
-            grid-gap: 1rem;
-        }
+    }
+    .contenedor_menu_redes{
+        display: flex;
+        grid-gap: 1rem;
     }
     .contenedor_icono_menu_despegable{
         grid-area: sp8;
         align-self: flex-start;
         justify-content: flex-start;
     }
-    .grid_seccion_noticias{
+    .grid_seccion_principal{
         display: grid;
         grid-gap: .5rem;
         grid-template-columns: 1fr;
@@ -329,34 +474,83 @@ body{
         grid-template-areas:
         "elemento1" 
         "elemento2" 
-        "elemento3";
-        .contenedor_imagen_seccion{
-            grid-area: elemento1;
-            align-self: center;
-            justify-self: center;
-            margin: .3rem 0 0 0;
-        }
-        .titulo_seccion{
-            grid-area: elemento2;
-            align-self: center;
-            justify-self: center;
-            text-align: center;
-            margin: 0;
-        }
-        .parrafo_seccion{
-            grid-area: elemento3;
-            align-self: center;
-            justify-self: center;
-            margin: 0 0 .4rem 0;
-        }   
+        "elemento3"
+        "elemento4";
     }
-    .flex_aside_seccnoticia{
+    .contenedor_imagen_seccion{
+        grid-area: elemento1;
+        align-self: center;
+        justify-self: center;
+        margin: .3rem 0 0 0;
+    }
+    .posicion_tituloIndex{
+        grid-area: elemento2;
+        align-self: center;
+        justify-self: center;
+        text-align: center;
+        margin: 0;
+    }
+    .parrafo_seccion{
+        grid-area: elemento3;
+        align-self: center;
+        justify-self: center;
+        margin: 0 0 .4rem 0;
+    }
+    .botonSeccion{
+        grid-area: elemento4;
+    } 
+
+    .flex_aside_principal{
         flex-direction: column;
     }
     .menu_aside_despegable{
         order: 1;
         width: 100%;
     }
+    .grid_guias{
+        order:2;
+    }
 }
 
-/*-----||| AJUSTES DE ELEMENTOS AL DISMINUIR PANTALLA |||-----*/
+@media (max-width: 480px) {
+    .seccion_portadas_grid{
+        display: grid;
+        justify-self: center;  
+        grid-template-columns:auto auto;
+        grid-template-rows: auto auto auto auto;
+    }
+    .contenedor_guias_intro {
+        grid-template-columns: 1fr auto;
+        grid-template-rows: 1fr auto 1fr;
+        grid-template-areas: 
+        "sp1"
+        "sp2"
+        "sp3";
+    }
+    .contenedor_ImgGuiaIntro_posicion, .parrafo_guias_intro {
+        justify-self: center;
+        text-align: center;
+    }
+
+    .contenedor_encabezado{
+        grid-template:1fr auto / 1fr;
+        grid-template-areas:
+        "sp1 sp2"
+        "sp3 sp4"; 
+    }     
+    .contenedor_logo{
+        display: none;
+    }
+    .contenedor_menu_principal{
+        grid-column-start:sp1 ;
+        grid-column-end: sp2;
+        justify-self: center;
+    }
+    .contenedor_lista_redes{
+        grid-area: sp3;
+    }
+    .contenedor_icono_menu_despegable{
+        grid-area: sp4;
+    }
+    
+}

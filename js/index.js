@@ -19,14 +19,20 @@ function toggleItems() {
 toggleButton.addEventListener('click', toggleItems);
 
 //______________________________________________________________________________________________
-//---------------------CODIGO DE FORMULARIO LOGIN DESPEGABLE-------------------------------------
+//---------------------CODIGO DE FORMULARIO LOGIN-REGISTER DESPEGABLE-------------------------------------
 const emailLogin  = document.getElementById('emailLogin') 
 const passwordLogin  = document.getElementById('passwordLogin')
 const btnLogin = document.getElementById('btn-login')
 const btnOpenLogin = document.getElementById('btn-open-login');
-
+const btnOpenRegister = document.getElementById('btn-open-register');
+const emailRegister = document.getElementById('emailRegister')
+const passwordRegister = document.getElementById('passwordRegister')
+const btnRegister = document.getElementById('btn-register')
+const txtRegister = document.getElementById('txtRegister')
+const txtLogin = document.getElementById('txtLogin')
 
 var loginVisible = false;
+var registerVisible = false;
 
 function abrirFormLogin() {
     if (loginVisible) {
@@ -52,17 +58,6 @@ function abrirFormLogin() {
 }
 
 btnOpenLogin.addEventListener('click', abrirFormLogin);
-
-//______________________________________________________________________________________________
-//---------------------CODIGO DE FORMULARIO REGISTER DESPEGABLE----------------------------------
-const btnOpenRegister = document.getElementById('btn-open-register');
-const emailRegister = document.getElementById('emailRegister')
-const passwordRegister = document.getElementById('passwordRegister')
-const btnRegister = document.getElementById('btn-register')
-const txtRegister = document.getElementById('txtRegister')
-const txtLogin = document.getElementById('txtLogin')
-
-var registerVisible = false;
 function abrirFormRegister() {
     if (registerVisible) {
         emailRegister.style.display = 'none';
@@ -86,4 +81,5 @@ function abrirFormRegister() {
     registerVisible = !registerVisible; // Invertir el estado
 }
 btnOpenRegister.addEventListener('click', abrirFormRegister);
-
+//----------------------------------------------------------------------------------------------
+//______________________________________________________________________________________________

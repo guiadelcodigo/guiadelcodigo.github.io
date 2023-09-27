@@ -1,3 +1,36 @@
+
+_______________________________
+--------------------------------------------
+Utilizar el atributo onclick: Puedes agregar el atributo onclick a cualquier elemento HTML (por ejemplo, un botón o un elemento <div>) y proporcionar una función de JavaScript que se ejecute cuando se hace clic en el elemento. Por ejemplo:
+<button onclick="window.location.href = 'https://www.ejemplo.com'">Ir a Ejemplo.com</button> 
+------------------------------------------
+Usar JavaScript: Puedes utilizar JavaScript para detectar eventos de clic en elementos HTML específicos y realizar acciones de redireccionamiento o interacción. Esto te brinda un control más personalizado sobre el comportamiento.
+<div id="miElemento">Haz clic aquí</div>
+
+<script>
+  document.getElementById("miElemento").addEventListener("click", function() {
+    window.location.href = 'https://www.ejemplo.com';
+  });
+</script>
+----------------------------------------------
+Utilizar <button> o <input>: Si no necesitas enlaces de navegación, sino botones de acción, puedes utilizar elementos como <button> o <input> de tipo "button" para realizar acciones en la página web sin redireccionar.
+<button id="miBoton">Realizar Acción</button>
+
+<script>
+  document.getElementById("miBoton").addEventListener("click", function() {
+    // Realizar alguna acción aquí
+  });
+</script>
+______________________________________________________________
+roducción a la programación
+Lógica de programación
+Programador (orientado a objetos)
+Desarrollador de JavaScript (Node JS)
+Desarrollador de JavaScript (React)
+Programador en C#
+Control de versiones | github
+Creación de modelos 3D para entornos virtuales
+
 ___________________
 **position:**
 static:
