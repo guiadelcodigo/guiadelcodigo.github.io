@@ -1,0 +1,687 @@
+<!DOCTYPE html>
+<html lang="es" data-tema="light">
+<head>
+    <title>GUÍADELCÓDIGO|ALFA1.1</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Miguel Salcedo Cárdenas, ElMaikPerruno">
+    <meta name="description" content="Guía del Código: Tutoriales y guías para aprender a desarrollar sitios web, aplicaciones móviles y videojuegos.">
+    <meta name="keywords" content="guias, tutoriales, cursos, aprender programacion, guía del código, guiadelcodigo, guia del codigo, tutoriales de programación, guías de desarrollo web, desarrollo de videojuegos, tutoriales de JavaScript, aprender a programar, guías de programación, HTML, CSS, JavaScript, Node.js, MySQL, Godot, sql, desarrollo de videojuegos, desarrollo web, php, python, gdscript, logica de programacion">
+    <link rel="canonical" href="https://www.guiadelcodigo.com/guias.html">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="./css/variables.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="./css/animaciones.css">
+    <link rel="stylesheet" href="./css/docs.css">
+</head>
+<body>
+    <div id="pagina">
+        <header id="header">
+            <section class="header__section estilo-section size-section">
+                <figure class="header__logo">
+                    <img class="header__logo-image" src="assets/img/logo/logo1.png" alt="Logo de Guía del Código">
+                </figure>
+                <figure class="header__logo">
+                    <img class="header__logo-image header__logo-image--dark" src="assets/img/logo/logo2.png" alt="Logo de Guía del Código">
+                </figure>
+                <div class="header__container-icono-tema">
+                    <figure class="header__icono-tema--principal">
+                        <svg width="80" height="40" viewBox="0 0 409 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="light">
+                            <path id="sun" d="M189.855 146.333C189.855 180.386 217.556 208.086 251.608 208.086C285.66 208.086 313.361 180.386 313.361 146.333C313.361 112.281 285.66 84.5803 251.608 84.5803C217.556 84.5803 189.855 112.281 189.855 146.333ZM239.25 232.667H263.917V269.667H239.25V232.667ZM239.25 23H263.917V60H239.25V23ZM128.25 134H165.25V158.667H128.25V134ZM337.917 134H374.917V158.667H337.917V134ZM173.106 242.262L155.667 224.823L181.826 198.664L199.265 216.103L173.106 242.262ZM303.901 76.576L330.073 50.4047L347.512 67.844L321.341 94.0153L303.901 76.576ZM181.826 94.0277L155.667 67.8563L173.119 50.417L199.265 76.5883L181.826 94.0277ZM347.512 224.823L330.073 242.262L303.901 216.091L321.341 198.651L347.512 224.823Z" fill="black"/>
+                            <path id="sun" d="M189.855 146.333C189.855 180.386 217.556 208.086 251.608 208.086C285.66 208.086 313.361 180.386 313.361 146.333C313.361 112.281 285.66 84.5803 251.608 84.5803C217.556 84.5803 189.855 112.281 189.855 146.333ZM239.25 232.667H263.917V269.667H239.25V232.667ZM239.25 23H263.917V60H239.25V23ZM128.25 134H165.25V158.667H128.25V134ZM337.917 134H374.917V158.667H337.917V134ZM173.106 242.262L155.667 224.823L181.826 198.664L199.265 216.103L173.106 242.262ZM303.901 76.576L330.073 50.4047L347.512 67.844L321.341 94.0153L303.901 76.576ZM181.826 94.0277L155.667 67.8563L173.119 50.417L199.265 76.5883L181.826 94.0277ZM347.512 224.823L330.073 242.262L303.901 216.091L321.341 198.651L347.512 224.823Z" fill="var(--amarillo)"/>
+                            <path id="cloud" d="M286.042 179.291C279.542 128.091 235.705 88.375 182.75 88.375C141.755 88.375 106.144 112.339 89.8854 150.106C57.9339 159.656 34 189.823 34 222.25C34 263.26 67.3646 296.625 108.375 296.625H272C304.814 296.625 331.5 269.939 331.5 237.125C331.477 223.791 326.987 210.849 318.748 200.366C310.508 189.883 298.993 182.463 286.042 179.291Z" fill="var(--gris-claro-1)"/>
+                            </g>
+                        </svg>               
+                    </figure>
+                    <figure class="header__icono-tema--dark">
+                        <svg width="80" height="40" viewBox="0 0 409 320" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <g id="dark">
+                            <path id="moon" d="M240.43 143.094C225.921 128.579 216.039 110.088 212.034 89.9583C208.03 69.8287 210.082 48.9637 217.932 30C195.551 34.4058 174.993 45.3873 158.888 61.54C113.855 106.573 113.855 179.593 158.888 224.626C203.932 269.67 276.941 269.658 321.985 224.626C338.133 208.521 349.114 187.969 353.525 165.593C334.561 173.441 313.696 175.493 293.567 171.488C273.438 167.484 254.947 157.603 240.43 143.094Z" fill="var(--gris-claro-1)"/>
+                            <path id="star1" d="M335.081 266.73C334.987 266.452 334.813 266.208 334.582 266.028C334.35 265.847 334.071 265.739 333.779 265.716L325.227 265.036L321.527 256.844C321.409 256.581 321.217 256.357 320.975 256.199C320.732 256.042 320.45 255.958 320.161 255.958C319.872 255.958 319.589 256.041 319.346 256.198C319.104 256.355 318.912 256.579 318.794 256.843L315.093 265.036L306.542 265.716C306.254 265.738 305.98 265.843 305.751 266.018C305.521 266.193 305.347 266.43 305.249 266.701C305.151 266.972 305.134 267.266 305.198 267.547C305.263 267.827 305.407 268.084 305.613 268.285L311.933 274.446L309.698 284.124C309.63 284.417 309.652 284.723 309.76 285.004C309.869 285.284 310.059 285.525 310.306 285.696C310.554 285.867 310.847 285.96 311.148 285.962C311.448 285.964 311.743 285.876 311.993 285.709L320.16 280.264L328.328 285.709C328.583 285.879 328.885 285.966 329.191 285.959C329.498 285.953 329.795 285.852 330.043 285.672C330.291 285.491 330.477 285.239 330.577 284.949C330.678 284.659 330.687 284.345 330.603 284.05L327.86 274.45L334.664 268.327C335.109 267.925 335.273 267.298 335.081 266.73Z" fill="var(--gris-claro-1)"/>
+                            <path id="star2" d="M299.624 67.7715C299.53 67.4938 299.356 67.2498 299.125 67.0696C298.893 66.8894 298.614 66.7809 298.322 66.7575L289.77 66.078L286.07 57.8865C285.952 57.6226 285.76 57.3985 285.518 57.2412C285.275 57.0839 284.993 57.0002 284.704 57C284.415 56.9998 284.132 57.0833 283.889 57.2403C283.647 57.3974 283.455 57.6213 283.337 57.885L279.636 66.078L271.085 66.7575C270.797 66.7803 270.523 66.8853 270.294 67.0601C270.064 67.2349 269.89 67.472 269.792 67.7431C269.694 68.0141 269.677 68.3077 269.741 68.5886C269.806 68.8695 269.95 69.1259 270.156 69.327L276.476 75.4876L274.241 85.1656C274.173 85.4586 274.195 85.7652 274.303 86.0456C274.412 86.326 274.602 86.5674 274.849 86.7383C275.097 86.9092 275.39 87.0018 275.691 87.0041C275.991 87.0064 276.286 86.9183 276.536 86.7511L284.703 81.3061L292.871 86.7511C293.126 86.9208 293.428 87.0081 293.734 87.0014C294.041 86.9947 294.338 86.8942 294.586 86.7135C294.834 86.5328 295.02 86.2806 295.12 85.9907C295.221 85.7009 295.23 85.3873 295.146 85.0921L292.403 75.4921L299.207 69.369C299.652 68.967 299.816 68.34 299.624 67.7715Z" fill="var(--gris-claro-1)"/>
+                            <path id="star3" d="M83.9207 142.627C83.8264 142.349 83.6529 142.105 83.4215 141.925C83.1901 141.745 82.911 141.636 82.6187 141.613L74.0672 140.933L70.3666 132.742C70.2488 132.478 70.0571 132.254 69.8147 132.097C69.5723 131.939 69.2896 131.856 69.0006 131.855C68.7117 131.855 68.4288 131.939 68.1863 132.096C67.9437 132.253 67.7518 132.477 67.6336 132.74L63.9331 140.933L55.3815 141.613C55.0942 141.636 54.8196 141.741 54.5904 141.916C54.3612 142.09 54.1872 142.327 54.0893 142.599C53.9913 142.87 53.9735 143.163 54.0381 143.444C54.1026 143.725 54.2466 143.981 54.453 144.182L60.7726 150.343L58.5376 160.021C58.4697 160.314 58.4915 160.621 58.6 160.901C58.7085 161.181 58.8989 161.423 59.1463 161.594C59.3937 161.765 59.6868 161.857 59.9875 161.86C60.2881 161.862 60.5826 161.774 60.8326 161.607L69.0001 156.162L77.1677 161.607C77.4232 161.776 77.7245 161.864 78.0311 161.857C78.3377 161.85 78.635 161.75 78.8828 161.569C79.1306 161.388 79.3172 161.136 79.4173 160.846C79.5175 160.556 79.5265 160.243 79.4432 159.948L76.6997 150.348L83.5037 144.224C83.9492 143.822 84.1127 143.195 83.9207 142.627Z" fill="var(--gris-claro-1)"/>
+                            </g>
+                        </svg>
+                    </figure>
+                </div>
+                <nav class="header__nav--main">
+                    <ul class="header__nav-list--main">
+                        <li class="header__nav-item">
+                            <a class="header__nav-link--main" href="index.html">
+                                Inicio
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link--main pagina-activa" href="guias.html">
+                            Guías
+                            </a>
+                        </li>
+                        <li class="header__nav-item">
+                            <a class="header__nav-link--main" href="juegos.html">
+                            Juegos
+                            </a>
+                        </li>            
+                    </ul>
+                </nav>
+                <nav class="header__nav--social">
+                    <ul class="header__nav-list--social">
+                        <a class="header__nav-link--social" href="https://www.youtube.com/@guiadelcodigo" target="_blank">
+                            <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="YouTube icon">
+                            <span>
+                                YouTube
+                            </span>
+                        </a>
+                        <a class="header__nav-link--social" href="https://www.facebook.com/guiadelcodigo" target="_blank">
+                            <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook icon">
+                            <span>
+                                Facebook
+                            </span>
+                        </a>
+                        <a class="header__nav-link--social" href="https://www.instagram.com/guiadelcodigo/" target="_blank">
+                            <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon">
+                            <span>
+                                Instagram
+                            </span>
+                        </a>
+                        <a class="header__nav-link--social" href="https://www.tiktok.com/@guiadelcodigo" target="_blank">
+                            <img class="header__nav-img--social" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="Tiktok icon">
+                            <span>
+                                TikTok
+                            </span>
+                        </a>
+                        <a class="header__nav-link--social" href="https://www.linkedin.com/company/guiadelcodigo/" target="_blank">
+                            <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn icon">
+                            <span>
+                                LinkedIn
+                            </span>
+                        </a>
+                        <a class="header__nav-link--social" href="https://discord.com/invite/gtFzH3zn6U" target="_blank">
+                            <img class="header__nav-img--social" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord icon">
+                            <span>
+                                Discord
+                            </span>
+                        </a>
+                    </ul>
+                </nav>
+                <div class="header__container-boton--dark">
+                    <input type="checkbox" class="header__tema-check">
+                    <div class="header__tema-option"></div>
+                </div>
+                <div class="header__container-boton--menu">
+                    <button class="boton-menu">
+                    </button>
+                </div>
+            </section>
+        </header>
+        <main>
+            <section class="section__main estilo-section size-section">
+                <h1 class="section__h1 texto-articulo text-outline">Explora las guias y tutoriales de Guíadelcódigo</h1>
+                <article class="estilo-article size-article">
+                    <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                        Sección de Guías 
+                    </h2>
+                    <div class="article__contenedor-texto">
+                    <h3 class="article__h3-subtitulo-1 texto-articulo">¿Quieres aprender a programar sin dramas ni dolores de cabeza? &#129327;</h3>
+                    <p class="article__parrafo">
+                        *¡Estás en el lugar correcto!✅&#129497;
+                        <br>*Tu única obligación es divertirte.🤙
+                        <br>
+                            *¡Descubre que tan divertido es aprender programación y codea como un pro! 🦸
+                        <br>
+                        <h4 class="texto-articulo">¡Explora abajo y navega en los temas de tu interés!📖
+                    </p>
+                    </div>
+                </article>
+            </section>
+            <section id="categorias" class="estilo-section size-section">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Categorías de guías  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'logica')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/logica.png" alt="portada de categoría:Lógica de programación">  
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guías de Lógica de programación</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'html')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/html.png" alt="portada de categoría:HTML">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guías de HTML</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'css')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/css.png" alt="portada de categoría:CSS">
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guías de CSS</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'javascript')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/javascript.png" alt="portada de categoría:Javascript">
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guías de JavaScript</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'gdscript')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/gdscript.png" alt="portada de categoría:GDScript">
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guías de GDScript</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link " href="#" onclick="mostrarGuias(event, 'python')">
+                                    <img class="portada-size" src="assets/img/portadas/categorias/python.png" alt="portada de categoría:Python">
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guías de Python</h3>
+                                </a>
+                                </br><h4 class="descripcion-guia">Descubre la versatilidad de Python con nuestras guías detalladas. Perfecto para todo tipo de proyectos.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-logica" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de logica de programación  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-html" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de HTML  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-css" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de CSS  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-javascript" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de Javascript  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-gdscript" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de GDScript  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+            <section id="guias-python" class="estilo-section size-section oculto">
+                <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    Guías de Python  
+                </h2>
+                <div class="section__main-categorias size-article">
+                    <ul class="main__ul-categorias">
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                        <li class="main__li-categorias estilo-article">
+                            <figure class="size-article ">
+                                <a class="portada-link" href="#">
+                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
+                                
+                            <figcaption class="texto-articulo ">
+                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                            </figcaption>
+                            </figure>  
+                        </li>
+                    </ul>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <section class="footer__section estilo-section size-section">
+                <div class="footer__container">
+                    <div class="footer__section--terms">
+                        <h2 class="footer__title footer__title--terms">
+                            Términos y Condiciones
+                        </h2>
+                        <p class="footer__text footer__text-1--terms">
+                            Al utilizar nuestro sitio web, aceptas cumplir con los siguientes términos y condiciones. Nos reservamos el derecho de modificar estos términos en cualquier momento.
+                        </p>
+                        <h3 class="footer__subtitle footer__subtitle-1--terms">
+                            1.1- Uso del sitio y propiedad
+                        </h3>
+                        <p class="footer__text footer__text-2--terms">
+                            Este sitio está destinado a proporcionar información sobre desarrollo web y videojuegos. El contenido en Guiadelcodigo.com no debe ser reproducido sin permiso.
+                        </p>
+                        <h3 class="footer__subtitle footer__subtitle-2-terms">
+                            1.2- Limitación de responsabilidad
+                        </h3>
+                        <p class="footer__text footer__text-3--terms">
+                            Guiadelcodigo.com no se hace responsable de cualquier daño derivado del uso de este sitio.
+                        </p>
+                    </div>
+                    <div class="footer__section--privacy">
+                        <h2 class="footer__title footer__title--privacy">
+                            Política de Privacidad
+                        </h2>
+                        <p class="footer__text footer__text-1--privacy">
+                            En Guiadelcodigo.com, respetamos tu privacidad y estamos comprometidos a proteger tu información personal.</p>
+                        <h3 class="footer__subtitle footer__subtitle-1--privacy">
+                            2.1- Uso de información
+                        </h3>
+                        <p class="footer__text footer__text-2--privacy">
+                            Recopilamos datos como nombre, correo electrónico, y datos de uso del sitio para mejorar nuestros servicios, enviar boletines y responder a tus consultas.
+                        </p>
+                        <h3 class="footer__subtitle footer__subtitle-2--privacy">
+                            2.2- Protección de datos
+                        </h3>
+                        <p class="footer__text footer__text-3--privacy">
+                            Implementamos medidas de seguridad para proteger tu información contra accesos no autorizados.
+                        </p>
+                    </div>
+                    <div class="footer__section--legal">
+                        <h2 class="footer__title footer__title--legal">
+                            Aviso Legal y Contacto
+                        </h2>
+                        <h3 class="footer__subtitle footer__subtitle-1--legal">
+                            3.1- Aviso Legal
+                        </h3>
+                        <p class="footer__text footer__text-1--legal">
+                            El propietario no se hace responsable de los errores u omisiones en los contenidos ni de los daños derivados del uso del sitio.
+                        </p>
+                        <h3 class="footer__subtitle footer__subtitle-2--legal">
+                            3.2- Información del Propietario
+                        </h3>
+                        <p class="footer__text footer__text-2--legal">
+                            Guía del código tiene la misión de ser un guía para el aprendizaje sobre programación.
+                        </p>
+                        <p class="footer__text footer__text-3--legal">
+                            Este sitio web es propiedad de Miguel Salcedo Cárdenas.
+                            <br>
+                            Correo: 
+                            <a class="color-link" id="copyEmail" href="mailto:soporte@guiadelcodigo.com">
+                              soporte@guiadelcodigo.com
+                            </a>
+                            <span id="copyMessage" class="footer__copy-message">¡Texto copiado!</span>
+                          </p>
+                        <p class="footer__text footer__text-4--legal">Ubicación: Guadalajara, Mex.</p>
+                    </div>
+                    <nav class="footer__nav--social">
+                        <ul class="footer__nav-list--social">
+                            <a class="header__nav-link--social" href="https://www.youtube.com/@guiadelcodigo" target="_blank">
+                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="YouTube icon">
+                                <span>
+                                    YouTube
+                                </span>
+                            </a>
+                            <a class="header__nav-link--social" href="https://www.facebook.com/guiadelcodigo" target="_blank">
+                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook icon">
+                                <span>
+                                    Facebook
+                                </span>
+                            </a>
+                            <a class="header__nav-link--social" href="https://www.instagram.com/guiadelcodigo/" target="_blank">
+                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon">
+                                <span>
+                                    Instagram
+                                </span>
+                            </a>
+                            <a class="header__nav-link--social" href="https://www.tiktok.com/@guiadelcodigo" target="_blank">
+                                <img class="header__nav-img--social" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="Tiktok icon">
+                                <span>
+                                    TikTok
+                                </span>
+                            </a>
+                            <a class="header__nav-link--social" href="https://www.linkedin.com/company/guiadelcodigo/" target="_blank">
+                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn icon">
+                                <span>
+                                    LinkedIn
+                                </span>
+                            </a>
+                            <a class="header__nav-link--social" href="https://discord.com/invite/gtFzH3zn6U" target="_blank">
+                                <img class="header__nav-img--social" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord icon">
+                                <span>
+                                    Discord
+                                </span>
+                            </a>
+                        </ul>
+                    </nav>
+                </div>
+            </section>
+        </footer>
+    </div>
+    <script src="js/script.js"></script>
+    <script src="js/dark.js"></script>
+    <script src="js/clases.js"></script>
+</script>
+</body>
+</html>
