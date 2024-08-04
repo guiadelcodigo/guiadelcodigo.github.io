@@ -1,0 +1,114 @@
+:root{
+/*COLORES-USADOS*/
+--morado:#544CAC;
+--turquesa:#02CEC0;
+--azul:#004AAD;
+--amarillo:#FF9D00;
+--negro:#000000;
+--blanco:#FFFFFF;
+--gris-claro-1:#D9D9D9;
+--gris-claro-2:#595959;
+--gris-oscuro-1:#383839;
+--gris-oscuro-2:#252526;
+/*TIPOGRAFIA*/
+--tipo-letra:Arial, sans-serif;
+--size-letra-redes:1rem;
+--letra-size-tema:.6rem;
+--letra-size-main-h1:1rem;
+--letra-size-article-h2:.8rem;
+/*TAMAÑO DE ICONOS*/
+--icono-size-logo:10rem;
+--icono-size-logo-responsive:5rem;
+--icono-size-red-social:1.5rem;
+--icono-size-red-social-responsive:2.5rem;
+--icono-size-red-social-responsive-2:1.2rem;
+--icono-size-tema-width:1.5rem;
+--icono-size-tema-height:1rem;
+/*TAMAÑO DE BOTONES*/
+--boton-size-navegacion:150px;
+--boton-size-navegacion-responsive:120px;
+--boton-size-navegacion-responsive-2:80px;
+--boton-size-menu:3rem;
+--boton-size-menu-responsive:2rem;
+/*||DESKTOP||TAMAÑOS DE GRID||: TEMPLATE & TEMPLATE-AREAS  */
+--grid-header-template-desktop:"a1 a2 a3" / 0.5fr 1fr 0.5fr;
+--grid-footer-template-desktop: "a1"
+                                "a2"
+                                "a3"
+                                "a4";
+/*||TABLET||TAMAÑOS DE GRID||: TEMPLATE & TEMPLATE-AREAS  */
+--grid-header-template-tablet: "a1"
+                        "a2"
+                        "a3"
+                        "b1" 
+                        1fr / 1fr;
+/*||MOBILE||TAMAÑOS DE GRID||: TEMPLATE & TEMPLATE-AREAS  */
+}
+
+:root[data-tema="light"]{
+--mensaje-tema:"Light Mode";
+--animation-sun: rotate 25s linear infinite;
+--show-logo-1:block;
+--show-logo-2:none;
+--show-sun:block;
+--show-moon:none;
+/*||TEMA-MODO-LUZ||*/
+--color-body:var(--gris-claro-1);
+--color-seccion:var(--turquesa);
+--color-articulo:var(--morado);
+--color-borde:var(--azul);
+--color-borde-shadow:0 0 10px var(--blanco);
+--color-texto:var(--negro);
+--color-boton-fondo:var(--amarillo);
+--color-boton-letra:var(--negro);
+--color-boton-borde:var(--negro);
+--color-boton-fondo-clic:var(--amarillo);
+--color-boton-borde-clic:var(--blanco);
+--color-boton-letra-clic:var(--blanco);
+}
+:root[data-tema="dark"]{
+    --transform-boton-tema:translateX(80%);
+    --mensaje-tema:"Dark Mode";
+    --animation-moon:show 3s alternate infinite both;
+    --show-logo-1:none;
+    --show-logo-2:block;
+    --show-sun:none;
+    --show-moon:block;
+    
+    /*||TEMA-MODO-OSCURO||*/
+    --color-body:var(--gris-oscuro-2);
+    --color-seccion:var(--gris-oscuro-1);
+    --color-articulo:var(--gris-claro-2);
+    --color-borde:var(--color-seccion);
+    --color-borde-shadow:0 0 10px var(--gris-oscuro-1);
+    --color-texto:var(--gris-claro-1);
+    --color-boton-fondo:var(--gris-oscuro-2);
+    --color-boton-letra:var(--gris-claro-1);
+    --color-boton-borde:var(--gris-claro-2);
+    --color-boton-fondo-clic:var(--gris-claro-2);
+    --color-boton-letra-clic:var(--gris-claro-1);
+    --color-boton-borde-clic:var(--gris-claro-1);
+    }
+/*@media(prefers-color-scheme:dark){
+    :root[data-tema]{
+        --transform-boton-tema:translateX(100%);
+        --mensaje-tema:"Dark Mode";
+        --animation-moon:show 3s alternate infinite both;
+        --show-logo-1:none;
+        --show-logo-2:block;
+        --show-sun:none;
+        --show-moon:block;
+        
+        ||TEMA-MODO-OSCURO||
+        --color-body:var(--gris-oscuro-2);
+        --color-seccion:var(--gris-oscuro-1);
+        --color-articulo:var(--gris-claro-2);
+        --color-texto:var(--gris-claro-1);
+        --color-boton-fondo:var(--gris-oscuro-2);
+        --color-boton-letra:var(--gris-claro-1);
+        --color-boton-borde:var(--gris-claro-2);
+        --color-boton-fondo-clic:var(--gris-claro-2);
+        --color-boton-letra-clic:var(--gris-claro-1);
+        --color-boton-borde-clic:var(--gris-claro-1);
+        }
+}*/
