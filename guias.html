@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="author" content="Miguel Salcedo Cárdenas, ElMaikPerruno">
-    <meta name="description" content="Guía del Código: Tutoriales y guías para aprender a desarrollar sitios web, aplicaciones móviles y videojuegos.">
+    <meta name="description" content="Explora tutoriales y guías para aprender a desarrollar sitios web, aplicaciones móviles y videojuegos.">
     <meta name="keywords" content="guias, tutoriales, cursos, aprender programacion, guía del código, guiadelcodigo, guia del codigo, tutoriales de programación, guías de desarrollo web, desarrollo de videojuegos, tutoriales de JavaScript, aprender a programar, guías de programación, HTML, CSS, JavaScript, Node.js, MySQL, Godot, sql, desarrollo de videojuegos, desarrollo web, php, python, gdscript, logica de programacion">
     <link rel="canonical" href="https://www.guiadelcodigo.com/guias.html">
     <link rel="stylesheet" href="./css/reset.css">
@@ -14,7 +14,7 @@
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animaciones.css">
-    <link rel="stylesheet" href="./css/docs.css">
+    <link rel="stylesheet" href="css/style-guias.css">
 </head>
 <body>
     <div id="pagina">
@@ -50,7 +50,7 @@
                 <nav class="header__nav--main">
                     <ul class="header__nav-list--main">
                         <li class="header__nav-item">
-                            <a class="header__nav-link--main" href="index.html">
+                            <a class="header__nav-link--main" href="https://guiadelcodigo.com/">
                                 Inicio
                             </a>
                         </li>
@@ -116,11 +116,11 @@
                 </div>
             </section>
         </header>
-        <main>
+        <main id="main">
             <section class="section__main estilo-section size-section">
                 <h1 class="section__h1 texto-articulo text-outline">Explora las guias y tutoriales de Guíadelcódigo</h1>
                 <article class="estilo-article size-article">
-                    <h2 class="section__article-h2--principal texto-articulo text-outline ">
+                    <h2 id="seccion-principal" class="section__article-h2--principal texto-articulo text-outline ">
                         Sección de Guías 
                     </h2>
                     <div class="article__contenedor-texto">
@@ -144,7 +144,7 @@
                     <ul class="main__ul-categorias">
                         <li class="main__li-categorias estilo-article">
                             <figure class="size-article ">
-                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'logica')">
+                                <a class="portada-link" onclick="mostrarGuias(event, 'logica')" href="#">
                                     <img class="portada-size" src="assets/img/portadas/categorias/logica.png" alt="portada de categoría:Lógica de programación">  
                             <figcaption class="texto-articulo ">
                                 <h3 class="titulo-guia text-outline">Guías de Lógica de programación</h3>
@@ -155,9 +155,8 @@
                         </li>
                         <li class="main__li-categorias estilo-article">
                             <figure class="size-article ">
-                                <a class="portada-link" href="#" onclick="mostrarGuias(event, 'html')">
+                                <a class="portada-link"  onclick="mostrarGuias(event, 'html')" href="#">
                                     <img class="portada-size" src="assets/img/portadas/categorias/html.png" alt="portada de categoría:HTML">
-                                
                             <figcaption class="texto-articulo ">
                                 <h3 class="titulo-guia text-outline">Guías de HTML</h3>
                                 </a>
@@ -222,9 +221,8 @@
                             <figure class="size-article ">
                                 <a class="portada-link" href="#">
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
-                                
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía<br>Intro al pseudocódigo</h3></a></br><h4 class="descripcion-guia">Proximamente</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -233,37 +231,7 @@
                                 <a class="portada-link" href="#">
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía<br>Variables y estructuras de control<br></h3></a></br><h4 class="descripcion-guia">Proximamente</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -278,11 +246,10 @@
                     <ul class="main__ul-categorias">
                         <li class="main__li-categorias estilo-article">
                             <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
-                                
+                                <a class="portada-link" href="#" onclick="abrirGuia(event, 'html-1')">
+                                    <img class="portada-size" src="assets/img/portadas/guias/html1.png" alt="portada de guía: guía 1">
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 1<br>Crear la Estructura básica de HTML</h3></a></br><h4 class="descripcion-guia">Aprende conceptos básicos de HTML y como hacer su estructuta básica.</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -290,39 +257,8 @@
                             <figure class="size-article ">
                                 <a class="portada-link" href="#">
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
-                                
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 2<br>Entender los atributos globales</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -341,7 +277,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 1<br>Cómo dar estilos con CSS</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -351,37 +287,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 2<br>Cómo utilizar selectores</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -400,7 +306,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 1<br>Cómo Manipular el DOM con JavaScript</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -410,37 +316,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 2<br>Cómo Utilizar Eventos en JavaScript</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -459,7 +335,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 1<br>Introducción a GDScript</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -469,37 +345,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 2<br>Manipulacion de nodos</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -518,7 +364,7 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 1">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 1</h3></a></br><h4 class="descripcion-guia">Desarrolla tu pensamiento lógico con nuestras guías prácticas y lleva tus habilidades de programación al siguiente nivel.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 1<br>Introducción a Python</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
@@ -528,42 +374,152 @@
                                     <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 2">
                                 
                             <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 2</h3></a></br><h4 class="descripcion-guia">No se trata de memorizar... Aprende a estructurar páginas web de forma efectiva y semántica con nuestras guías super completas de HTML</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 3">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 3</h3></a></br><h4 class="descripcion-guia">Dale estilo y vida a tus sitios web con nuestras guías de CSS. Aprende desde lo básico, lo necesario y hasta técnicas avanzadas.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 4">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline">Guía 4</h3></a></br><h4 class="descripcion-guia">Domina el lenguaje de la web con nuestras guías practicas de JavaScript. Desde fundamentos hasta programación avanzada.</h4>
-                            </figcaption>
-                            </figure>  
-                        </li>
-                        <li class="main__li-categorias estilo-article">
-                            <figure class="size-article ">
-                                <a class="portada-link" href="#">
-                                    <img class="portada-size" src="assets/img/portadas/guias/portada_guia_ejemplo.png" alt="portada de guía: guía 5">
-                                
-                            <figcaption class="texto-articulo ">
-                                <h3 class="titulo-guia text-outline" >Guía 5</h3></a></br><h4 class="descripcion-guia">Crea increíbles videojuegos con Godot usando nuestras guías de GDScript. Aprende desde cero y desarrolla tu primer juego.</h4>
+                                <h3 class="titulo-guia text-outline">Guía 2<br>Cómo manipular archivos</h3></a></br><h4 class="descripcion-guia">Proximamente...</h4>
                             </figcaption>
                             </figure>  
                         </li>
                     </ul>
                 </div>
+            </section>
+            <section id="guias-html-1" class="estilo-section size-section oculto">
+                <article class="estilo-article size-article">
+                    <h2 class="texto-articulo text-outline">GUIA 1 - Cómo crear la estructura básica de HTML</h2>
+                        <div class="contenedor__guia-1 estilo-cuaderno size-cuaderno">
+                            <div class="contenedor__guia--intro">
+                                <h3 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Introducción:</h3>
+                                <div class="flex-col size-article estilo-tarjeta">
+                                <p class="texto-articulo "><i class="fa-solid fa-star text-outline"></i> El HTML (HyperText Markup Language) es el lenguaje estándar para crear páginas web y define el contenido y la estructura de la web.
+                                </p>
+                                <p class="texto-articulo "><i class="fa-solid fa-star text-outline"></i> HTML se considera como lenguaje de etiquetas, las etiquetas en html se escriben con su nombre propio dentro de paréntesis angulares y cada etiqueta cuenta con su propia función específica.
+                                </p>
+                                </div>
+                                <div class="contenedor__guia--tarjetas">
+                                    <h3 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Conceptos básicos acerca de HTML:</h3>
+                                    <ul class="main__ul-categorias">
+                                        <li class="main__li-categorias estilo-tarjeta">
+                                            <h4 class="texto-articulo text-outline">1.-Etiquetas:</h4>
+                                            <p><i class="fa-solid fa-star"></i>Es una palabra clave que define el inicio y el final de un elemento dentro de un documento web.
+                                            </p>
+                                            <p><i class="fa-solid fa-star"></i>Se escribe dentro de paréntesis angulares ("&lt; &gt;" ) y se utilizan dos etiquetas para formar elementos, una de apertura y otra de cierre, la ultima se escribe con una barra diagonal al inicio de su palabra (/), pero también existen etiquetas de auto-cierre que no la necesitan utilizar.</p>
+                                            <p><br><i class="fa-solid fa-code"></i><b>EJEMPLO:</b><br>La siguiente <u>etiqueta</u> es utilizada para colocar párrafos de texto.<br><br>&lt;p&gt; </p>
+                                
+                                        </li>
+                                        <li class="main__li-categorias estilo-tarjeta">
+                                            <h4 class="texto-articulo text-outline">2.-Elementos:</h4>
+                                            <p><i class="fa-solid fa-star"></i>La combinación de una etiqueta de apertura(si lo tiene), el contenido y una etiqueta de cierre forma un elemento.</p>
+                                            <p><i class="fa-solid fa-star"></i>Los elementos pueden anidarse dentro de otros elementos, lo que permite la creación de estructuras jerárquicas en el contenido de una página web, esto significa que un elemento dentro de otro tiene un "elemento padre" y puede heredar sus atributos.</p>
+                                            <p><br><i class="fa-solid fa-code "></i><b>EJEMPLO:</b><br>El conjunto del siguiente contenido mas sus etiquetas forman un <u>elemento</u> de párrafo y tienen sus propios atributos por defecto.<br><br>&lt;p&gt;Este es un elemento &lt;/p&gt;</p>
+                                        </li>
+                                        <li class="main__li-categorias estilo-tarjeta">
+                                            <h4 class="texto-articulo text-outline">3.-Atributos:</h4>
+                                            <p><i class="fa-solid fa-star"></i>Son características adicionales que se añaden a las etiquetas de apertura para proporcionar información, modificar su comportamiento o apariencia.</p>
+                                            <p><i class="fa-solid fa-star"></i>Se colocan dentro de la etiqueta de apertura y consisten en un nombre de atributo seguido de un signo igual (=) y un valor entre comillas dobles ("). </p>
+                                            <p><br><i class="fa-solid fa-code"></i><b>EJEMPLO:</b><br><br>src y alt son atributos del elemento de imagen que permiten darle una descripcion y asignarle la imagen.<br><br>&lt;img src="imagen.jpg" alt="Descripción de la imagen" /&gt;</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                                <img class="estilo-margen" alt="imagen explicando conceptos basicos HTML" loading="lazy" src="assets/img/guias/html/conceptos_basicos.png">
+                                <h3 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Estructura Básica de un Documento HTML:</h3>
+                                <div class="contenedor__codigo">
+                                    <div id="copy-notification" class="copy-notification texto-articulo text-outline oculto ">¡Código copiado!</div>
+                                    <div class="cmd-container">
+                                        <!-- Barra superior de la consola -->
+                                        <div class="cmd-bar">
+                                            <span >Ejemplo HTML</span>
+                                            <button onclick="copyCode()">Copiar código</button>
+                                            <div class="cmd-buttons">
+                                                <div class="cmd-button minimize"></div>
+                                                <div class="cmd-button maximize"></div>
+                                                <div class="cmd-button close"></div>
+                                            </div>
+                                        </div>
+                                        <!-- Consola de comandos -->
+                                        <div class="cmd-console">
+                                            <code>
+&lt;!-- Este es un comentario de HTML --&gt;
+
+&lt;!DOCTYPE html&gt; 
+    &lt;html lang=&quot;es&quot;&gt;
+        &lt;head&gt;
+            &lt;meta charset=&quot;UTF-8&quot;&gt;
+            &lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1.0&quot;&gt;
+            &lt;title&gt;Título de la página&lt;/title&gt;
+        &lt;/head&gt;
+                &lt;body&gt;
+                    &lt;header&gt;&lt;/header&gt;
+                    &lt;main&gt;&lt;h1&gt;¡Hola Mundo!&lt;/h1&gt;&lt;/main&gt;
+                    &lt;footer&gt;&lt;/footer&gt;
+                &lt;/body&gt;
+    &lt;/html&gt;
+                                            </code>
+                                        </div>                                        
+                                    </div>
+                                </div>
+                                <h3 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Explicacion de la estructura básica de HTML:</h3>
+                                <div class="estilo-tarjeta">
+                                    <ol class="flex-col">
+                                        <li><strong>1.-&lt;!--Comentario--&gt;:</strong><br> Se utilizan para dejar notas o descripciones dentro del código que no son visibles en el navegador. Son útiles para explicar partes del código o para dejar recordatorios.</li>
+                                        <li><strong>2.-&lt;!DOCTYPE html&gt;:</strong><br>Indica al navegador que el documento está escrito en HTML5, la versión más moderna de HTML. Es necesario al comienzo de todos los documentos HTML para asegurar que el navegador interprete correctamente el contenido.</li>
+                                        <li><strong>3.-&lt;html lang="es"&gt;:</strong><br>Se utiliza al inicio del documento HTML. El atributo lang="es" especifica que el idioma principal del contenido es el español, lo que es útil tanto para los navegadores como para los motores de búsqueda y herramientas de accesibilidad.</li>
+                                        <li><strong>4.-&lt;head&gt;:</strong><br>Es esencial para definir la configuración de la página ya que contiene información meta sobre el documento y su contenido no es visible directamente en la página. </li>
+                                        <li><strong>5.-&lt;meta charset="UTF-8"&gt;:</strong><br>Define la codificación de caracteres utilizada en el documento, siendo UTF-8 la más común y compatible. Esto asegura que los caracteres especiales se muestren correctamente en el navegador.</li>
+                                        <li><strong>6.-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;:</strong><br>Esta etiqueta es crucial para el diseño responsivo. Establece que la página debe ajustarse al ancho del dispositivo en el que se está viendo, como teléfonos móviles o tablets.</li>
+                                        <li><strong>7.-&lt;title&gt;:</strong><br>Define el título de la página que aparece en la pestaña del navegador.</li>
+                                        <li><strong>8.-&lt;body&gt;:</strong><br>Todo el contenido visible de la página que se muestra al usuario se encuentra dentro de esta sección, incluyendo textos, imágenes, videos, enlaces y otros elementos multimedia.</li>
+                                        <li><strong>9.-&lt;header&gt;:</strong><br>Se usa para el encabezado de la página, como el logo, el nombre del sitio, y el menú de navegación. Es la primera sección que el usuario suele ver.</li>
+                                        <li><strong>10.-&lt;main&gt;:</strong><br> Es una etiqueta que agrupa el contenido principal de la página. Es útil para separar el contenido principal del contenido secundario o de navegación, mejorando la accesibilidad y el SEO.</li>
+                                        <li><strong>11.-&lt;footer&gt;:</strong><br>Etiqueta que se utiliza al final de la página. Suele contener información de contacto, derechos de autor, enlaces secundarios, y otras informaciones que son menos prioritarias pero importantes.</li>
+                                        <li><strong>12.-&lt;h1&gt;:</strong><br>Define el encabezado principal de la página. Es el título más importante y debe utilizarse para el título principal, ayudando a estructurar el contenido y mejora el SEO.</li>
+                                    </ol>
+                                </div>
+                                <h3 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Crea un documento HTML:</h3>
+                                <div class="estilo-tarjeta">
+                                    <h4 class="texto-articulo">Pasos a seguir: </h4>
+                                    <ol class="flex-col">
+                                        <li><strong>1.-Abre un editor de texto:</strong> <br> 
+                                            Puedes usar un bloc de notas simple o un editor de código más avanzado como Visual Studio Code.
+                                        </li>
+                                        <li><strong>2.-Escribe el código HTML:</strong><br> 
+                                            Copia y pega el ejemplo básico anterior y modifícalo para crear tu propio contenido.
+                                        </li>
+                                        <li><strong>3.-Guarda el archivo:</strong><br> 
+                                            Guarda el archivo con la extensión .html, por ejemplo, index.html.
+                                        </li>
+                                        <li><strong>4.- Abre el archivo en un navegador:</strong><br> 
+                                            Haz doble clic en el archivo para verlo en tu navegador.
+                                        </li>
+                                    </ol>
+                                </div>
+                                <h4 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Fuentes de información: </h4>
+                                <div class="estilo-tarjeta">
+                                    <p class="flex-col">
+                                        <strong>Página de mozilla:</strong>
+                                            La documentacion de mozilla es una fuente de informacion muy confiable.<br>
+                                            <a class="color-link" href="https://developer.mozilla.org/es/docs/Learn/HTML/Introduction_to_HTML/Document_and_website_structure">Visitar</a>
+                                    </p>
+                                </div>
+                                <h4 class="texto-articulo text-outline"><i class="fa-solid fa-thumbtack"></i> Botones de navegación: </h4>
+                                <div class="estilo-tarjeta">
+                                    <ul class="header__nav-list--main">
+                                        <li onclick="abrirCategorias(event, 'categorias')" class="header__nav-item">
+                                            <a class="header__nav-link--main" href="#">
+                                                Categorías de guías
+                                            </a>
+                                        </li>
+                                        <li onclick="mostrarGuias(event, 'html')" class="header__nav-item">
+                                            <a class="header__nav-link--main" href="#">
+                                                Guías de HTML
+                                            </a>
+                                        </li>
+                                        <li onclick="mostrarGuias(event, 'html')" class="header__nav-item">
+                                            <a class="header__nav-link--main" href="#">
+                                                Guía siguiente
+                                            </a>
+                                            </li>
+                                </div>
+                            </div>
+                        </div>
+                </article>
             </section>
         </main>
         <footer>
@@ -633,42 +589,42 @@
                             </a>
                             <span id="copyMessage" class="footer__copy-message">¡Texto copiado!</span>
                           </p>
-                        <p class="footer__text footer__text-4--legal">Ubicación: Guadalajara, Mex.</p>
+                        <p class="footer__text footer__text-4--legal">Ubicación: Guadalajara, México.<img loading="lazy" class="size-icon" src="assets/img/iconos/mex.png" alt="bandera de México" ></p>
                     </div>
                     <nav class="footer__nav--social">
                         <ul class="footer__nav-list--social">
                             <a class="header__nav-link--social" href="https://www.youtube.com/@guiadelcodigo" target="_blank">
-                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="YouTube icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/42/YouTube_icon_%282013-2017%29.png/800px-YouTube_icon_%282013-2017%29.png" alt="YouTube icon">
                                 <span>
                                     YouTube
                                 </span>
                             </a>
                             <a class="header__nav-link--social" href="https://www.facebook.com/guiadelcodigo" target="_blank">
-                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/5/51/Facebook_f_logo_%282019%29.svg" alt="Facebook icon">
                                 <span>
                                     Facebook
                                 </span>
                             </a>
                             <a class="header__nav-link--social" href="https://www.instagram.com/guiadelcodigo/" target="_blank">
-                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/a/a5/Instagram_icon.png" alt="Instagram icon">
                                 <span>
                                     Instagram
                                 </span>
                             </a>
                             <a class="header__nav-link--social" href="https://www.tiktok.com/@guiadelcodigo" target="_blank">
-                                <img class="header__nav-img--social" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="Tiktok icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://www.svgrepo.com/show/452114/tiktok.svg" alt="Tiktok icon">
                                 <span>
                                     TikTok
                                 </span>
                             </a>
                             <a class="header__nav-link--social" href="https://www.linkedin.com/company/guiadelcodigo/" target="_blank">
-                                <img class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://upload.wikimedia.org/wikipedia/commons/c/ca/LinkedIn_logo_initials.png" alt="LinkedIn icon">
                                 <span>
                                     LinkedIn
                                 </span>
                             </a>
                             <a class="header__nav-link--social" href="https://discord.com/invite/gtFzH3zn6U" target="_blank">
-                                <img class="header__nav-img--social" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord icon">
+                                <img loading="lazy" class="header__nav-img--social" src="https://www.svgrepo.com/show/353655/discord-icon.svg" alt="Discord icon">
                                 <span>
                                     Discord
                                 </span>
@@ -680,8 +636,10 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
+    <script src="js/script-guias.js"></script>
     <script src="js/dark.js"></script>
     <script src="js/clases.js"></script>
+    <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
 </script>
 </body>
 </html>

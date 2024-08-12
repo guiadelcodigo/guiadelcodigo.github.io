@@ -36,6 +36,9 @@
                                 "a2"
                                 "a3"
                                 "a4";
+--grid-guia-1-template-desktop: "a1"
+                                "a2"
+                                "a3";
 /*||TABLET||TAMAÑOS DE GRID||: TEMPLATE & TEMPLATE-AREAS  */
 --grid-header-template-tablet: "a1"
                         "a2"
@@ -65,6 +68,10 @@
 --color-boton-fondo-clic:var(--amarillo);
 --color-boton-borde-clic:var(--blanco);
 --color-boton-letra-clic:var(--blanco);
+--color-pizarron:#1b5e31;
+--color-pizarron-borde-1:#663300;
+--color-tarjeta:#f0fb78;
+--texto-cmd:#00cf00;
 }
 :root[data-tema="dark"]{
     --transform-boton-tema:translateX(80%);
@@ -88,27 +95,8 @@
     --color-boton-fondo-clic:var(--gris-claro-2);
     --color-boton-letra-clic:var(--gris-claro-1);
     --color-boton-borde-clic:var(--gris-claro-1);
+    --color-pizarron:var(--gris-claro-1);
+    --color-pizarron-borde-1:#83888b;
+    --color-tarjeta:var(--gris-claro-2);
+    --texto-cmd:var(--gris-claro-1);
     }
-/*@media(prefers-color-scheme:dark){
-    :root[data-tema]{
-        --transform-boton-tema:translateX(100%);
-        --mensaje-tema:"Dark Mode";
-        --animation-moon:show 3s alternate infinite both;
-        --show-logo-1:none;
-        --show-logo-2:block;
-        --show-sun:none;
-        --show-moon:block;
-        
-        ||TEMA-MODO-OSCURO||
-        --color-body:var(--gris-oscuro-2);
-        --color-seccion:var(--gris-oscuro-1);
-        --color-articulo:var(--gris-claro-2);
-        --color-texto:var(--gris-claro-1);
-        --color-boton-fondo:var(--gris-oscuro-2);
-        --color-boton-letra:var(--gris-claro-1);
-        --color-boton-borde:var(--gris-claro-2);
-        --color-boton-fondo-clic:var(--gris-claro-2);
-        --color-boton-letra-clic:var(--gris-claro-1);
-        --color-boton-borde-clic:var(--gris-claro-1);
-        }
-}*/

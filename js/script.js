@@ -20,10 +20,37 @@ function mostrarGuias(event, categoria) {
   secciones.forEach(function(section) {
     section.classList.add('oculto');
   });
-
   // Mostrar la sección de la categoría seleccionada
   document.getElementById('guias-' + categoria).classList.remove('oculto');
 }
+
+function abrirGuia(event, guias) {
+  // Prevenir el comportamiento predeterminado del enlace
+  event.preventDefault();
+  // Ocultar todas las secciones de guías
+  var secciones = document.querySelectorAll('.size-section');
+  secciones.forEach(function(section) {
+    section.classList.add('oculto');
+  });
+  // Mostrar la sección de la categoría seleccionada
+  document.getElementById('guias-' + guias).classList.remove('oculto');
+}
+
+function abrirCategorias(event, categorias) {
+  // Prevenir el comportamiento predeterminado del enlace
+  event.preventDefault();
+  // Ocultar todas las secciones de guías
+  var secciones = document.querySelectorAll('.size-section');
+  secciones.forEach(function(section) {
+    section.classList.add('oculto');
+  });
+  // Mostrar la sección de la categoría seleccionada
+  document.getElementById(categorias).classList.remove('oculto');
+}
+
+
+
+
 
 document.addEventListener('DOMContentLoaded', () => {
   const images1 = [
@@ -55,4 +82,3 @@ document.getElementById('copyEmail').addEventListener('click', function(event) {
       console.error('No se pudo copiar el texto: ', err);
     });
   });
-
