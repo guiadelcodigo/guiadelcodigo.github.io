@@ -32,10 +32,6 @@
 --boton-size-menu-responsive:2rem;
 /*||DESKTOP||TAMAÑOS DE GRID||: TEMPLATE & TEMPLATE-AREAS  */
 --grid-header-template-desktop:"a1 a2 a3" / 0.5fr 1fr 0.5fr;
---grid-footer-template-desktop: "a1"
-                                "a2"
-                                "a3"
-                                "a4";
 --grid-guia-1-template-desktop: "a1"
                                 "a2"
                                 "a3";

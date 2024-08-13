@@ -349,140 +349,32 @@ flex-direction: column;
 }
 
 /*|||||4.-ESTILOS EN FOOTER|||||*/
-.footer__text {
-    max-width: 250px;
-    margin: 2px;
-    font-size: .5rem;
-  }
-.footer__subtitle {
-    font-size: .7rem;
-  }
-.footer__title{
-    font-size: .9rem;
-}
+
 /*|| 4.1.-CONTENEDOR ||*/
-.footer__section{/*<section>*/  
-    display:grid;
-    grid-template: var(--grid-footer-template-desktop);
-    justify-items: center;
-    padding: .2rem;
-}
+
 .footer__container{/*<div>*/
-    align-items: auto;
-    justify-items: auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-items: center;
     gap: 10px;
     margin: 1%;
-    display: grid;
-    grid-template-areas: var(--grid-footer-template-desktop);
-}
-/*|| 4.2.-TERMINOS ||*/
-.footer__section--terms{/*<div>*/
-    align-items: center;
-    justify-content: center;
-    grid-area: a1;
-    display: grid;
-    gap: 1%;
-    grid-template-areas:    "a1 a2 a3 a4 a5"
-                            "a6 a7 a8 a9 a10";
-    .footer__title--terms{
-    grid-area: a1;
-    align-self: center;
-    }
-    .footer__text-1--terms{
-    grid-area: a6; 
-    }
-    .footer__subtitle-1--terms{
-    grid-area: a2;
-    align-self:flex-end;
-    }
-    .footer__text-2--terms{
-    grid-area: a7;
-    align-self: flex-start;
     
-    }
-    .footer__subtitle-2--terms{
-    grid-area: a3;
-    align-self:flex-end;
-    }
-    .footer__text-3--terms{
-    grid-area: a8;
-    align-self: flex-start; 
-    } 
 }
- /*|| 4.3.-POLITICA ||*/
-.footer__section--privacy{/*<div>*/
-    grid-area: a2;
-    display: grid;
-    gap: 1%;
-    grid-template-areas:    "a1 a2 a3 a4 a5"
-                            "a6 a7 a8 a9 a10";
-    .footer__title--privacy{
-    grid-area: a1;
-    align-self: center;
-    }
-    .footer__text-1--privacy{
-    grid-area: a6; 
-    }
-    .footer__subtitle-1--privacy{
-    grid-area: a2;
-    align-self:flex-end;
-    }
-    .footer__text-2--privacy{
-    grid-area: a7;
-    align-self: flex-start;
-    }
-    .footer__subtitle-2--privacy{
-    grid-area: a3;
-    align-self:flex-end;
-    }
-    .footer__text-3--privacy{
-    grid-area: a8;
-    align-self: flex-start;
-    }
-}
-/*|| 4.4.-AVISO Y CONTACTO ||*/
-.footer__section--legal{/*<div>*/
-    grid-area: a3;
-    display: grid;
-    gap: 1%;
-    grid-template-areas:    "a1 a2 a3 a4 a5"
-                            "a6 a7 a8 a9 a10";
-    .footer__title--legal{
-    grid-area: a1;
-    align-self: center;
-    }
-    .footer__text-1--legal{
-    grid-area: a6; 
-    }
-    .footer__subtitle-1--legal{
-    grid-area: a2;
-    align-self:flex-end;
-    }
-    .footer__text-2--legal{
-    grid-area: a7;
-    }
-    .footer__subtitle-2--legal{
-        grid-column-start: a3;
-        grid-column-end: a4;
-        align-self:flex-end;
-    }
-    .footer__text-3--legal{
-        grid-area: a8;
-        align-self: center;
-    }
-    .footer__text-4--legal{
-        grid-area: a9;
-        align-self:center;
-    }
+.container__footer-links{
+    padding: 1rem;
+    display:flex ;
+    flex-direction: column;
+    gap: .8rem;
+    justify-content: center;
+    align-content: center;
 }
 /*|| 4.5.-REDES SOCIALES ||*/
 .footer__nav-list--social{/*<ul>*/
-    grid-area: a4;
+    padding: .3rem;
     display: flex;
     flex-direction: row;
-    justify-content: center;
     align-items: center;
-    align-content: center;
     justify-content: center;
     gap:1rem ;/* row-gap column gap */
     font-size: .8rem;

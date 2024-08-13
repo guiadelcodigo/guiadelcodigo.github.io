@@ -1,3 +1,4 @@
+/*copia codigo de un <code> y remplaza ejemplos de etiqueta(&lt;, &gt;) por < > */
 function copyCode() {
     // Selecciona el contenido de la etiqueta <code>
     const codeElement = document.querySelector('code');

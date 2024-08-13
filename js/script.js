@@ -1,73 +1,21 @@
-/* LISTA DE IMAGENES PARA REPRODUCIR CON LA FUNCION  changeImage()*/
 
-function rotateImages(elementId, imageArray, interval) {
-  let currentIndex = 0;
-  const imgElement = document.getElementById(elementId);
+/*oculta todos los hijos del <main> y muestra solo un hijo por su id*/
+function mostrarElemento(idSeleccionado) {
+  // Selecciona el <main> y todos sus hijos
+  var main = document.getElementById('main');
+  var hijos = main.children;
 
-  function changeImage() {
-      imgElement.src = imageArray[currentIndex];
-      currentIndex = (currentIndex + 1) % imageArray.length;
+  // Recorre todos los hijos de <main>
+  for (var i = 0; i < hijos.length; i++) {
+      // Oculta todos los elementos excepto el que tiene el ID seleccionado
+      if (hijos[i].id !== idSeleccionado) {
+          hijos[i].classList.add('oculto'); // Añade la clase 'oculto' para ocultar
+      } else {
+          hijos[i].classList.remove('oculto'); // Quita la clase 'oculto' para mostrar
+      }
   }
-
-  setInterval(changeImage, interval);
 }
-
-function mostrarGuias(event, categoria) {
-  // Prevenir el comportamiento predeterminado del enlace
-  event.preventDefault();
-  // Ocultar todas las secciones de guías
-  var secciones = document.querySelectorAll('.size-section');
-  secciones.forEach(function(section) {
-    section.classList.add('oculto');
-  });
-  // Mostrar la sección de la categoría seleccionada
-  document.getElementById('guias-' + categoria).classList.remove('oculto');
-}
-
-function abrirGuia(event, guias) {
-  // Prevenir el comportamiento predeterminado del enlace
-  event.preventDefault();
-  // Ocultar todas las secciones de guías
-  var secciones = document.querySelectorAll('.size-section');
-  secciones.forEach(function(section) {
-    section.classList.add('oculto');
-  });
-  // Mostrar la sección de la categoría seleccionada
-  document.getElementById('guias-' + guias).classList.remove('oculto');
-}
-
-function abrirCategorias(event, categorias) {
-  // Prevenir el comportamiento predeterminado del enlace
-  event.preventDefault();
-  // Ocultar todas las secciones de guías
-  var secciones = document.querySelectorAll('.size-section');
-  secciones.forEach(function(section) {
-    section.classList.add('oculto');
-  });
-  // Mostrar la sección de la categoría seleccionada
-  document.getElementById(categorias).classList.remove('oculto');
-}
-
-
-
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  const images1 = [
-      'assets/img/portadas/juegos/master-ball-2.png',
-      'assets/img/portadas/juegos/master-ball-1.png',
-  ];
-
-  const images2 = [
-      'assets/img/portadas/juegos/dodge-the-creeps-2.png',
-      'assets/img/portadas/juegos/dodge-the-creeps-1.png',
-  ];
-
-  rotateImages('dynamicImage1', images1, 5000); // Cambia de imagen cada 5 segundos
-  rotateImages('dynamicImage2', images2, 5000); // Cambia de imagen cada 5 segundos
-  // Añade más llamadas a rotateImages() para otras imágenes
-});
-
+/*Muestra label con mensaje para confirmar texto copiado*/
 document.getElementById('copyEmail').addEventListener('click', function(event) {
     event.preventDefault(); // Evita que se abra el cliente de correo
   
