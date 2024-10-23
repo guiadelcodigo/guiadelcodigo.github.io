@@ -68,6 +68,7 @@
 --color-pizarron-borde-1:#663300;
 --color-tarjeta:#f0fb78;
 --texto-cmd:#00cf00;
+--color-ventana-emergente:#f5f6f7fa;
 }
 :root[data-tema="dark"]{
     --transform-boton-tema:translateX(80%);
@@ -95,4 +96,5 @@
     --color-pizarron-borde-1:#83888b;
     --color-tarjeta:var(--gris-claro-2);
     --texto-cmd:var(--gris-claro-1);
+    --color-ventana-emergente:var(--gris-oscuro-2);
     }

@@ -15,6 +15,24 @@
 |||||   4.4.-AVISO Y CONTACTO               |||||          
 |||||---------------------------------------|||||*/
 /*|||||1.-ESTILOS GENERALES|||||*/
+.swiper {
+    width: 100%;
+    min-height: 220px;
+}
+
+.swiper-slide {
+    background-position: center;
+    width: 150px;
+    height: 150px;
+    
+}
+
+.swiper-img{
+    width: 150px;
+    height: 150px;
+    
+}
+
 
 .size-icon{
     width:var(--icono-size-red-social-responsive-2) ;
@@ -67,6 +85,33 @@ border-radius:15px;
         margin-bottom: .4rem;
         margin-top: .4rem; 
 }
+.size-sidebar-1{
+    position: absolute;
+    margin-right: .5rem;
+    float: right;
+    display: none;
+    justify-content: center;
+    left: 57%;
+    padding: 1%;
+    width: 40%;
+    height: auto;
+    z-index:5;
+}
+.estilo-sidebar-1{
+    background-color:var(--color-ventana-emergente);
+    border-color: var(--color-borde);
+    box-shadow: var(--color-borde-shadow);
+    border-style: solid;
+    border-width: 1px;
+    border-radius:15px;
+    }
+.contenedor__menu-usuario--div-btn{
+    display: flex;
+    gap: 1rem;
+    float: right;
+    flex-wrap: wrap;
+    padding: .5rem;
+}
 .titulo-guia{
     font-size: 1rem;
 }
@@ -80,6 +125,40 @@ border-radius:15px;
 .texto-articulo{/*NEGRITAS Y CENTRADO*/
     font-weight: bold;
     text-align: center;
+}
+.titulo-left{/*NEGRITAS Y alinear a izquierda*/
+    padding: 1rem;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align:left;
+    color: black; /* Color del texto */
+    text-shadow: 
+      1px 1px 0 var(--gris-claro-1), 
+      -1px -1px 0 var(--gris-claro-1), 
+      -1px 1px 0 var(--gris-claro-1), 
+      1px -1px 0 var(--gris-claro-1), 
+      1px 0 0 var(--gris-claro-1), 
+      0 1px 0 var(--gris-claro-1), 
+      -1px 0 0 var(--gris-claro-1), 
+      0 -1px 0 var(--gris-claro-1); /* Sombra blanca para crear el contorno */
+
+}
+.subtitulo-left{/*NEGRITAS Y alinear a izquierda*/
+    padding: .7rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+    text-align:left;
+    color: black; /* Color del texto */
+    text-shadow: 
+      1px 1px 0 var(--gris-claro-1), 
+      -1px -1px 0 var(--gris-claro-1), 
+      -1px 1px 0 var(--gris-claro-1), 
+      1px -1px 0 var(--gris-claro-1), 
+      1px 0 0 var(--gris-claro-1), 
+      0 1px 0 var(--gris-claro-1), 
+      -1px 0 0 var(--gris-claro-1), 
+      0 -1px 0 var(--gris-claro-1); /* Sombra blanca para crear el contorno */
+
 }
 .text-outline {/*Borde blanco para texto*/
     color: black; /* Color del texto */
@@ -288,7 +367,21 @@ transition: all 1s ease;
     color: var(--color-boton-letra); /* Color del texto */
     border: 2px solid var(--color-boton-borde); /* Color del borde del círculo */
     cursor: pointer;
+    &.menu-usuario-activado {
+        color: var(--color-boton-letra-clic);
+      }
 }
+.btn-cuadrado{
+    border-radius: 12px;
+    width: auto; 
+    height: var(--boton-size-menu);  
+    transition: all 1s ease;
+    background-color:var(--color-boton-fondo); /* Fondo del círculo */
+    color: var(--color-boton-letra); /* Color del texto */
+    border: 2px solid var(--color-boton-borde); /* Color del borde del círculo */
+    cursor: pointer;
+}
+
 .boton-dark:hover {/*boton-dark-hover*/
     border-color: var(--color-boton-borde-clic); /* Color del borde al hacer clic */
 }
@@ -298,9 +391,7 @@ transition: all 1s ease;
 .boton-menu:hover {/*boton-menu-hover*/
     border-color: var(--color-boton-borde-clic); /* Color del borde al hacer clic */
 }
-.boton-menu:focus {/*boton-menu-focus*/
-        color: var(--color-boton-letra-clic); /* Color del texto al hacer clic */
-}
+
 /*|||||3.-ESTILOS EN MAIN|||||*/
 .section__main{/*<section>*/
 display: flex;
@@ -382,7 +473,10 @@ flex-direction: column;
 }
 
 @media (max-width: 900px){/**________TABLET______**/
-    
+.size-sidebar-1{/*sidebar menu usuario*/
+        width: 55%;
+        left: 42%;
+    }
 .header__section{/*<header>*/
     /*GRID*/
 grid-template: var(--grid-header-template-tablet);  
@@ -414,6 +508,10 @@ grid-template: var(--grid-header-template-tablet);
 }
 }
 @media (max-width: 610px){/**________celular______**/
+    .size-sidebar-1{/*sidebar menu usuario*/
+        width: 75%;
+        left: 22%;
+    }
     .header__nav-link--main{
         width: var(--boton-size-navegacion-responsive-2);
         height: var(--boton-size-navegacion-responsive-2); 

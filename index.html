@@ -11,10 +11,11 @@
     <link rel="canonical" href="https://guiadelcodigo.com/">
     <link rel="stylesheet" href="./css/reset.css">
     <link rel="stylesheet" href="./css/normalize.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css"/>
     <link rel="stylesheet" href="./css/variables.css">
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/animaciones.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />  
+    <script type="module" src="/js/firebase-conexion.js"></script>
 </head>
 <body>
     <div id="pagina">
@@ -111,12 +112,27 @@
                     <div class="header__tema-option"></div>
                 </div>
                 <div class="header__container-boton--menu">
-                    <button class="boton-menu">
+                    <button id="btn-menu-usuario" class="boton-menu">
+                        <i class="fa-solid fa-user"></i>
                     </button>
                 </div>
             </section>
         </header>
-        <main>
+        <main id="main">
+            <section id="menu-usuario" class="estilo-sidebar-1 size-sidebar-1" hidden>
+                <div class="contenedor__menu-usuario">
+                    <p class="text-outline texto-articulo">Da clic para iniciar sesión o registrarte.</p>
+                    <div class="contenedor__menu-usuario--div-btn">
+                        <button class="btn-cuadrado ">Iniciar sesión</button> 
+                        <button class="btn-cuadrado">Registrate</button>
+                    </div>
+                    <div class="contenedor__menu-usuario--form1">
+                         
+                    </div>
+                    <div class="contenedor__menu-usuario--form2">
+                    </div>
+                </div>
+            </section>
             <section class="section__main estilo-section size-section">
                 <h1 class="section__h1 texto-articulo text-outline">Bienvenid@ a Guíadelcódigo, una comunidad de programadores aprendices y maestros</h1>
                 <article class="estilo-article size-article">
@@ -131,6 +147,53 @@
                         <br>*¡Sé un maestro del código en un abrir y cerrar de ojos!💻&#9749;
                         <br> 
                         <h4 class="texto-articulo">¡Únete a nuestro <a class="text-outline color-link" href="https://discord.com/invite/gtFzH3zn6U" >discord</a> y conecta con mas aprendices! &#9996;😜</p>
+                    </div>
+                </article>
+            </section>
+            <section class="size-section estilo-section">
+                <article class="size-article estilo-article">
+                    <h2 class="size-article texto-articulo text-outline">Categorías de programación</h2>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/logica.png">
+                                <figcaption>Guias de lógica de programación</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/html.png">
+                                <figcaption>Guias de HTML</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/css.png">
+                                <figcaption>Guias de CSS</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/javascript.png">
+                                <figcaption>Guias de Javascript</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/gdscript.png">
+                                <figcaption>Guias de GDscript</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/categorias/python.png">
+                                <figcaption>Guias de Python</figcaption>                            
+                            </figure>
+                        </div>
+                        <div class="swiper-pagination"></div>
+                    </div>
+                    <h2 class="size-article texto-articulo text-outline">Juegos de la comunidad</h2>
+                    <div class="swiper mySwiper">
+                        <div class="swiper-wrapper">
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/juegos/master-ball-1.png">
+                                <figcaption>Masterball game</figcaption>                            
+                            </figure>
+                            <figure class="swiper-slide">
+                                <img class="swiper-img" src="assets/img/portadas/juegos/dodge-the-creeps-2.png">
+                                <figcaption>Dodge the creeps</figcaption>                            
+                        </div>
+                        <div class="swiper-pagination"></div>
                     </div>
                 </article>
             </section>
@@ -195,10 +258,9 @@
         </footer>
     </div>
     <script src="js/script.js"></script>
-    <script src="js/dark.js"></script>
-    <script src="js/clases.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="js/swiper.js"></script>
     <script src="https://kit.fontawesome.com/46f3978785.js" crossorigin="anonymous"></script>
-</script>
+    <script  src="js/dark.js"></script>
 </body>
 </html>
